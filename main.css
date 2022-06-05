@@ -76,7 +76,7 @@ body {
 .btn {
   color: #fff;
   background-color: #EF7F04;
-  font-size: 13px;
+  font-size: 18px;
 }
 
 .btn__hover:hover {
@@ -421,6 +421,34 @@ body {
   margin-top: 3.5rem;
 }
 
+#about_us {
+  padding-top: 6rem;
+}
+
+#about_us .about_us__pills .nav-link {
+  color: #000;
+  background: none;
+}
+
+#about_us .about_us__pills .nav-pills .nav-link.active, #about_us .about_us__pills .nav-pills .show > .nav-link {
+  color: #fff;
+  background-color: #EF7F04;
+}
+
+#about_us .about_us__pills .nav-pills {
+  margin: 2rem auto 1.5rem;
+}
+
+@media (min-width: 768px) {
+  #about_us .about_us__pills .nav-pills {
+    width: 50%;
+  }
+}
+
+#about_us #pills-description {
+  margin-bottom: 5.375rem;
+}
+
 #about_us #pills-description .logo {
   margin-top: 45px;
   margin-left: 50px;
@@ -441,12 +469,12 @@ body {
   background: transparent;
 }
 
-#about_us .features_list {
+#about_us #pills-description .features_list {
   min-height: 450px;
   padding: 70px 40px 85px;
 }
 
-#about_us .features_list .feature_item {
+#about_us #pills-description .features_list .feature_item {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -456,18 +484,169 @@ body {
           align-items: flex-start;
 }
 
-#about_us .features_list .feature_item img {
+#about_us #pills-description .features_list .feature_item img {
   margin-right: 1.5rem;
 }
 
-#about_us .features_list .feature_item__text h3 {
+#about_us #pills-description .features_list .feature_item__text h3 {
   text-transform: uppercase;
   font-size: 1rem;
   line-height: 2rem;
 }
 
-#about_us .features_list .feature_item__text p {
+#about_us #pills-description .features_list .feature_item__text p {
   line-height: 26px;
+}
+
+#about_us #pills-description .btn {
+  display: block;
+  margin: auto;
+  font-size: 16px;
+  font-weight: 700;
+  padding: 1.125rem 2rem 1.125rem 1.75rem;
+}
+
+#about_us #pills-howWeWork {
+  padding: 4.25rem 4rem;
+}
+
+#about_us #pills-howWeWork .how_we_work {
+  padding-top: 75px;
+  background: #fff;
+}
+
+#about_us #pills-howWeWork .how_we_work__feature {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+#about_us #pills-howWeWork .how_we_work__feature h3 {
+  text-align: center;
+  -webkit-box-align: baseline;
+      -ms-flex-align: baseline;
+          align-items: baseline;
+  font-size: 1rem;
+  text-transform: uppercase;
+  margin-top: 2rem;
+}
+
+#about_us #pills-howWeWork .how_we_work__feature p {
+  text-align: center;
+  line-height: 26px;
+}
+
+#about_us #pills-feedback p {
+  margin-bottom: 0;
+}
+
+#about_us #pills-feedback .feedback {
+  padding: 3.875rem 6.375rem 7.125rem;
+}
+
+#about_us #pills-feedback .feedback__heading {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-bottom: 4rem;
+}
+
+#about_us #pills-feedback .feedback__heading .userName {
+  font-size: 18px;
+  font-weight: 700;
+  margin-right: 3.75rem;
+}
+
+#about_us #pills-feedback .feedback__heading .feedback__date {
+  margin-right: 20px;
+}
+
+#about_us #pills-feedback .feedback__heading .feedback_gray {
+  font-size: 14px;
+  line-height: 16px;
+  color: #8F8F8F;
+}
+
+#about_us #pills-feedback .send_feedback {
+  position: absolute;
+  top: 3.5rem;
+  right: 6.25rem;
+  padding: 1.125rem 1.75rem 1.125rem 1.25rem;
+  font-weight: 700;
+  font-size: 16px;
+  border: none;
+  -webkit-box-shadow: none;
+          box-shadow: none;
+}
+
+#about_us #pills-feedback .send_feedback img {
+  margin-right: 1.125rem;
+}
+
+#about_us #pills-certificate .splide {
+  margin: 0 2.375rem;
+  padding: 6rem 4rem;
+}
+
+#about_us #pills-certificate .splide .splide__arrow--prev {
+  left: 0;
+}
+
+#about_us #pills-certificate .splide .splide__arrow--next {
+  right: 0;
+}
+
+#portfolio .container {
+  padding: 3rem 0 0;
+  margin-bottom: 5rem;
+}
+
+#portfolio .container .splide {
+  margin: 0 2rem;
+  padding: 3rem;
+}
+
+#portfolio .container .splide .splide__arrow--prev {
+  left: 0;
+}
+
+#portfolio .container .splide .splide__arrow--next {
+  right: 0;
+}
+
+#portfolio .container .splide .splide__slide:hover {
+  -webkit-filter: drop-shadow(0px 4px 10px rgba(0, 0, 0, 0.25));
+          filter: drop-shadow(0px 4px 10px rgba(0, 0, 0, 0.25));
+}
+
+#portfolio iframe {
+  width: 100%;
+  height: 300px;
+}
+
+.splide__arrow {
+  background: none;
+}
+
+.splide__arrow svg {
+  fill: none;
+  width: auto;
+  height: auto;
+  stroke: #2F2F51;
+}
+
+.splide__arrow:hover svg {
+  stroke: #EF7F04;
 }
 
 .modal .modal-xl {

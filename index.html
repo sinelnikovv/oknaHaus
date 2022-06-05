@@ -43,7 +43,7 @@
             </li>                  
           </ul>
           <div class="modal_buttons ms-auto d-flex flex-column flex-xl-row">
-            <button type="button" class="btn btn__hover btn__nav"  data-bs-toggle="modal" data-bs-target="#exampleModal">
+            <button type="button" class="btn btn__hover btn__nav"  data-bs-toggle="modal" data-bs-target="#zamer">
               <img src="img/length.svg" alt=""> Заявка на замер
             </button>
             <button type="button" class="btn btn__reverse btn__nav" data-bs-toggle="modal" data-bs-target="#exampleModal">
@@ -115,7 +115,7 @@
   </section>
 
   <section id="ourServices">
-    <div class="container">
+    <div class="container p-0">
       <h2 class="h2 text-center ourServicesHeader mx-auto">Наши услуги</h2>
       <div class="row frow">
         <div class="col-12 col-lg-6">
@@ -176,13 +176,13 @@
 
   <section id="products">
 
-    <div class="container">
+    <div class="container p-0">
       <h2 class="h2 text-center">Продукция</h2>
 
       <!-- <div class="div"></div> слацдер или табс -->
       <div class="schtandart">
         <img class="schtandart_logo d-block mx-auto " src="img/logoSchtandart.png" alt="">
-        <div class="shtandart_waranty d-flex flex-wrap">
+        <div class="shtandart_waranty d-flex flex-wrap justify-content-between align-items-center">
           <div class="waranty">
             <img src="img/schtandart1.svg" alt="Сертифицированный 
         производитель Rehau">
@@ -229,42 +229,43 @@
   </section>
   
   <section id="about_us">
-    <div class="container">
-      <h2 class="h2">О компании</h2>
+    <div class="container p-0">
+      <h2 class="h2 text-center">О компании</h2>
       <div class="about_us__pills">
-        <ul class="nav nav-pills" id="pills-tab" role="tablist">
+        <ul class="nav flex-nowrap nav-pills justify-content-between" id="pills-tab" role="tablist">
           <li class="nav-item" role="presentation">
             <button class="nav-link active" id="pills-description-tab" data-bs-toggle="pill" data-bs-target="#pills-description" type="button"
               role="tab" aria-controls="pills-description" aria-selected="true">Описание</button>
           </li>
           <li class="nav-item" role="presentation">
-            <button class="nav-link" id="pills-howWeWork-tab" data-bs-toggle="pill" data-bs-target="#pills-howWeWork" type="button"
+            <button class="nav-link " id="pills-howWeWork-tab" data-bs-toggle="pill" data-bs-target="#pills-howWeWork" type="button"
               role="tab" aria-controls="pills-howWeWork" aria-selected="false">Как мы работаем</button>
           </li>
           <li class="nav-item" role="presentation">
-            <button class="nav-link" id="pills-feedback-tab" data-bs-toggle="pill" data-bs-target="#pills-feedback" type="button"
+            <button class="nav-link " id="pills-feedback-tab" data-bs-toggle="pill" data-bs-target="#pills-feedback" type="button"
               role="tab" aria-controls="pills-feedback" aria-selected="false">Отзывы</button>
           </li>
           <li class="nav-item" role="presentation">
-            <button class="nav-link" id="pills-certificate-tab" data-bs-toggle="pill" data-bs-target="#pills-certificate" type="button"
+            <button class="nav-link " id="pills-certificate-tab" data-bs-toggle="pill" data-bs-target="#pills-certificate" type="button"
               role="tab" aria-controls="pills-certificate" aria-selected="false">Сертификаты</button>
           </li>
         </ul>
-        <div class="tab-content bg-light" id="pills-tabContent">
+        <div class="tab-content" id="pills-tabContent">
+
           <div class="tab-pane fade show active" id="pills-description" role="tabpanel" aria-labelledby="pills-description-tab">
-            <div class="row">
+            <div class="row bg-light">
               <div class="col-12 col-lg-6">
                 <img class="logo" src="img/logo.png" alt="">
                 <p class="about_text">Мы помогаем клиентам подбирать решения, учитывая пожежелания к характеристикам окна и его стоимости. Окно - это объект,
                 которым Вы будете пользоваться много лет, поэтому для нас очень важно, чтобы Вы сделали правильный выбор.</p>
               </div>
-              <div class="col-12 col-lg-6 position-relative">
-              <video class="w-100" src="#" poster="img/aboutPhoto.png"></video>
+              <div class="col-12 col-lg-6 position-relative p-0">
+              <video class="w-100 h-100" src="#" poster="img/aboutPhoto.png"></video>
               <button class="play_button"><img src="img/playButton.svg" alt=""></button>
               </div>
             </div>
 
-            <div class="features_list row justify-content-between align-items-center">
+            <div class="features_list row justify-content-center justify-content-lg-between align-items-start">
 
               <div class="col-12 col-lg-6 col-xl-4 feature_item">
                 <img src="img/about1.svg" alt="Профессионализм">
@@ -317,30 +318,236 @@
               </div>
 
             </div>
+
+            <button type="button" class="btn btn__hover btn__nav" data-bs-toggle="modal" data-bs-target="#zamer">
+              <img class="me-4" src="img/length.svg" alt=""> Оформить заявку на замер
+            </button>
+
           </div>
-          <div class="tab-pane fade" id="pills-howWeWork" role="tabpanel" aria-labelledby="pills-howWeWork-tab">...</div>
-          <div class="tab-pane fade" id="pills-feedback" role="tabpanel" aria-labelledby="pills-feedback-tab">...</div>
-        </div>
-        <div class="tab-pane fade" id="pills-certificate" role="tabpanel" aria-labelledby="pills-certificate-tab">...</div>
-        </div>
+
+          <div class="tab-pane fade" id="pills-howWeWork" role="tabpanel" aria-labelledby="pills-howWeWork-tab">
+            <h2 class="h2 text-center">Как мы работаем</h2>
+
+            <div class="how_we_work d-flex flex-column align-items-center flex-md-row justify-content-between align-items-md-baseline">
+
+              <div class="how_we_work__feature">
+                <img src="img/howwork1.svg" alt="">
+                <h3>Бесплатно приедем</h3>
+                <p>Выезжаем бесплатно во все<br> города<br> Московской области</p>
+              </div>
+
+              <div class="how_we_work__feature">
+                <img src="img/howwork2.svg" alt="">
+                <h3>Выезжаем ежедневно</h3>
+                <p>С 9 до 21 без выходных<br> и праздников</p>
+              </div>
+
+              <div class="how_we_work__feature">
+                <img src="img/howwork3.svg" alt="">
+                <h3>Образцы с собой</h3>
+                <p>Покажем образцы профильных<br> систем и материалов отделки</p>
+              </div>
+
+              <div class="how_we_work__feature">
+                <img src="img/howwork4.svg" alt="">
+                <h3>Стоимость</h3>
+                <p>Называем точную стоимость<br> заказа на месте</p>
+              </div>
+
+            </div>
+
+          </div>
+
+          <div class="tab-pane fade position-relative " id="pills-feedback" role="tabpanel" aria-labelledby="pills-feedback-tab">
+            
+            <div class="splide" id="splideFeedback">
+
+              <div class="splide__arrows">
+                <button class="splide__arrow splide__arrow--prev">
+                  <svg width="26" height="49" viewBox="0 0 26 49"  xmlns="http://www.w3.org/2000/svg">
+                    <path d="M1.25 0.5L25.25 24.5L1.25 48.5"/>
+                  </svg>
+
+
+                </button>
+                <button class="splide__arrow splide__arrow--next">
+                  <svg width="26" height="49" viewBox="0 0 26 49"  xmlns="http://www.w3.org/2000/svg">
+                    <path d="M1.25 0.5L25.25 24.5L1.25 48.5" />
+                  </svg>
+                </button>
+              </div>
+
+
+              <div class="splide__track">
+                <ul class="splide__list">
+                  <li class="splide__slide">
+
+                    <div class="feedback">
+                      <div class="feedback__heading">
+                        <p class="userName">Раиса Михайлова</p>
+                        <p class="feedback__date feedback_gray">24.06.2021</p>
+                        <p class="feedback_number feedback_gray">Договор №123456</p>
+                      </div>
+                      <div class="feedback__text">
+                        <p>Огромное СПАСИБО всей команде Дизайн-Окно! В июне 2021 заказывала переостекление + отделка балкона первый раз и так все
+                        удачно - быстро, качественно. Все прошло отлично, в соответствии с условиями договора. Замерщик приехал как оговорено
+                        без опозданий, произвел замер лазерным уровнем, все подробно рассказал по профилю и комплектующим. Предоплата составила
+                        20%, остаток - по факту. Соотношение цена/качество в сравнении с конкурентами. Доставка точно в срок, за 3 дня все
+                        установили. Итог - красивые окна. Будем зимой проверять на прочность :)
+                        
+                        Большая благодарность за отлично проведённую работу! Замерщик по вызову пришёл быстро, всё хорошо объяснил , окна пришли
+                        в соответствии со согласованной датой, поднятие в квартиру прошла очень хорошо , монтажники справились со своей работой
+                        на отлично! Все прошло в позитиве, соотношение цены и качества хорошее. Отличная команда! Спасибо!!!</p>
+                      </div>
+                    </div>
+
+
+                  </li>
+                  
+                </ul>
+              </div>
+            </div>
+            <button type="button" class="send_feedback btn btn__hover" data-bs-toggle="modal" data-bs-target="#modal_feedback">
+            <img src="img/feedback.svg" alt=""> Оставить отзыв</button>
+          </div>
+
+          <div class="tab-pane fade" id="pills-certificate" role="tabpanel" aria-labelledby="pills-certificate-tab">
+
+            
+            
+            <div class="splide" id="splideSertificate">
+            
+              <div class="splide__arrows">
+                <button class="splide__arrow splide__arrow--prev">
+                  <svg width="26" height="49" viewBox="0 0 26 49" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M1.25 0.5L25.25 24.5L1.25 48.5" />
+                  </svg>
+              
+              
+                </button>
+                <button class="splide__arrow splide__arrow--next">
+                  <svg width="26" height="49" viewBox="0 0 26 49" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M1.25 0.5L25.25 24.5L1.25 48.5" />
+                  </svg>
+                </button>
+              </div>
+            
+            
+              <div class="splide__track">
+                <ul class="splide__list">
+
+                  <li class="splide__slide">
+                    <img src="img/sertificate1.png" alt="">
+                  </li>
+                  <li class="splide__slide">
+                    <img src="img/sertificate2.png" alt="">
+                  </li>
+                  <li class="splide__slide">
+                    <img src="img/sertificate3.png" alt="">
+                  </li>
+                  <li class="splide__slide">
+                    <img src="img/sertificate4.png" alt="">
+                  </li>
+                  <li class="splide__slide">
+                    <img src="img/sertificate5.png" alt="">
+                  </li>
+            
+                </ul>
+              </div>
+            </div>
+
+          </div>
+
+        </div>        
+        
       </div>
     </div>
   </section>
 
- 
+<section id="portfolio">
+  <div class="container bg-light">
+    <h2 class="h2 text-center">Портфолио</h2>
+    <div class="splide" id="splidePortfolio">
+    
+      <div class="splide__arrows">
+        <button class="splide__arrow splide__arrow--prev">
+          <svg width="26" height="49" viewBox="0 0 26 49" xmlns="http://www.w3.org/2000/svg">
+            <path d="M1.25 0.5L25.25 24.5L1.25 48.5" />
+          </svg>
+    
+    
+        </button>
+        <button class="splide__arrow splide__arrow--next">
+          <svg width="26" height="49" viewBox="0 0 26 49" xmlns="http://www.w3.org/2000/svg">
+            <path d="M1.25 0.5L25.25 24.5L1.25 48.5" />
+          </svg>
+        </button>
+      </div>
+    
+    
+      <div class="splide__track">
+        <ul class="splide__list">
+    
+          <li class="splide__slide">
+            <img src="img/portfolioWindow1.png" alt="">
+          </li>
+          <li class="splide__slide">
+            <img src="img/portfolioWindow2.png" alt="">
+          </li>
+          <li class="splide__slide">
+            <img src="img/portfolioWindow3.png" alt="">
+          </li>
+          <li class="splide__slide">
+            <img src="img/portfolioWindow4.png" alt="">
+          </li>
+              
+        </ul>
+      </div>
+    </div>
+    <iframe
+      src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d21098.82959767068!2d22.267964233877784!3d48.62221331572163!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x473919b944b6e3d9%3A0xda6ae0130042a3c!2z0KPQttCz0L7RgNC-0LQsINCX0LDQutCw0YDQv9Cw0YLRgdGM0LrQsCDQvtCx0LvQsNGB0YLRjCwg0KPQutGA0LDRl9C90LA!5e0!3m2!1suk!2snl!4v1654455831974!5m2!1suk!2snl"
+      allowfullscreen="" loading="lazy"
+      referrerpolicy="no-referrer-when-downgrade"></iframe>
+  </div>
+</section>
+
+
+
+
+
+
+
+
+<div class="modal fade" id="modalFeedback" tabindex="-1" aria-labelledby="modalFeedback" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        ...
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+        <button type="button" class="btn btn-primary">Save changes</button>
+      </div>
+    </div>
+  </div>
+</div>
   
   
 
 <!-- modal -->
 
-<div class="modal fade" id="ustanovka" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+<!-- <div class="modal fade" id="ustanovka" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
   <div class="container"></div>
   <div class="modal-dialog modal-dialog-centered modal-xl">
     <div class="modal-content">      
       <div class="modal-body position-relative">
         <div class="row">
           <div class="col-12 col-lg-5 offset-1">
-            <div class="splide" id="splide">
+            <div class="splide" id="splide1">
               <div class="splide__track">
                 <ul class="splide__list">
                   <li class="splide__slide">
@@ -377,7 +584,7 @@
       
     </div>
   </div>
-</div>
+</div> -->
 
 
 

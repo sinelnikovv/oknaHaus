@@ -65,7 +65,7 @@ body{
 .btn {
     color: $white;
     background-color: $primary;
-    font-size: 13px;
+    font-size: 18px;
 
     &__hover {
         &:hover {
@@ -280,7 +280,7 @@ body{
     transition: all .5s;   
     
     &:hover{
-        filter: drop-shadow(0px 4px 10px rgba(0, 0, 0, 0.25));
+        filter: $drop-shadow;
 
         .btn_service svg{
             stroke: $primary;
@@ -378,7 +378,35 @@ body{
 
 
 #about_us{
+    padding-top: 6rem;
+
+    .about_us__pills{
+        .nav-link{
+            color: $black;
+            background: none;
+        }
+
+        .nav-pills .nav-link.active, .nav-pills .show>.nav-link{
+                color: $white;
+                    background-color: $primary;
+            }
+
+        .nav-pills{
+            margin: 2rem auto 1.5rem;
+
+            @media (min-width:768px) {
+                    width: 50%;
+                }
+        }      
+            
+
+    }
+
+
     #pills-description{
+
+        margin-bottom: 5.375rem;
+
         .logo{
            margin-top: 45px;
            margin-left: 50px;
@@ -397,39 +425,206 @@ body{
             border: none;
             background: transparent;
         }
-    }
 
-    .features_list{
-        min-height: 450px;
-        padding: 70px 40px 85px;
-
-        .feature_item {
+        .features_list {
+            min-height: 450px;
+            padding: 70px 40px 85px;
+            
+            .feature_item {
                 display: flex;
-                max-width: 370px;
-
+                max-width: 370px;            
                 align-items: flex-start;
-        
+            
                 img {
                     margin-right: 1.5rem;
                 }
-        
+            
                 &__text {
                     h3 {
-                        text-transform: uppercase;
+                        text-transform:uppercase;
                         font-size: 1rem;
                         line-height: 2rem;
                     }
-        
+            
                     p {
                         line-height: 26px;
                     }
                 }
             }
+            
+        }
 
+        .btn{
+            display: block;
+            margin: auto;
+            font-size: 16px;
+            font-weight: 700;
+            padding: 1.125rem 2rem 1.125rem 1.75rem ;
+        }
+    }
+
+    #pills-howWeWork{
+        padding: 4.25rem 4rem;
+        
+        .how_we_work{ 
+            
+            padding-top: 75px;
+            background: $white;
+
+            
+
+            &__feature {
+                    display: flex;
+                    flex-direction: column;
+                    align-items: center;
+                    
+
+                    
+
+                    h3{
+                        text-align: center;
+                        align-items: baseline;
+                        font-size: 1rem;
+                        text-transform: uppercase;
+                        margin-top: 2rem;
+                    }
+
+                    p{
+                        text-align: center;
+                        line-height: 26px;
+                    }
+                }
+        }
+
+        
+    }
+
+    #pills-feedback{
+        p{
+            margin-bottom: 0;
+        }
+
+        
+
+        .feedback{
+            padding: 3.875rem 6.375rem 7.125rem;
+
+            &__heading{
+                display: flex;
+                align-items: center;
+                margin-bottom: 4rem;
+
+                .userName{
+                    font-size: 18px;
+                    font-weight: 700;
+                    margin-right: 3.75rem;
+                }
+
+                .feedback__date{
+                    margin-right: 20px;
+                }
+
+                .feedback_gray{
+                    font-size: 14px;
+                    line-height: 16px;
+                    color:#8F8F8F ;
+                }
+            }
+        }
+
+        .send_feedback{
+            position: absolute;
+            top: 3.5rem;
+            right: 6.25rem;
+            padding: 1.125rem 1.75rem 1.125rem 1.25rem;
+            font-weight: 700;
+            font-size: 16px;
+            border: none;
+            box-shadow: none;
+            img{
+                margin-right: 1.125rem;
+            }
+        }
+    }
+
+    #pills-certificate{
+        .splide{
+            margin: 0 2.375rem;
+            padding: 6rem 4rem;
+
+            .splide__arrow--prev{
+                left: 0;
+            }
+
+            .splide__arrow--next{
+                right: 0;
+            }
+
+            
+        }
+        
+
+        
+    }
+
+    
+    
+    
+
+}
+
+#portfolio{
+
+    .container{
+        padding: 3rem 0 0;
+        margin-bottom: 5rem;
+
+        .splide {
+                margin: 0 2rem;
+                padding: 3rem;
+        
+                .splide__arrow--prev {
+                    left: 0;
+                }
+        
+                .splide__arrow--next {
+                    right: 0;
+                }
+        
+                .splide__slide:hover {
+                    filter: $drop-shadow;
+                }
+        
+            }
+
+    }
+    
+    iframe{
+        width: 100%;
+        height: 300px;
     }
 
     
 }
+
+.splide__arrow {
+    background: none;
+
+    svg {
+        fill: none;
+        width: auto;
+        height: auto;
+        stroke: #2F2F51;
+    }
+
+    &:hover {
+        svg {
+            stroke: $primary;
+        }
+    }
+}
+
+
 
 .modal{  
     

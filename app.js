@@ -1,10 +1,28 @@
-var splide = new Splide('.splide', {
-  arrows: boolean = false,
-} );
-splide.mount();
+var splide = new Splide( '#splideFeedback', {
+  type   : 'loop',
+  perPage: 1,
+  perMove: 1,
+  pagination: boolean = false,
+} ).mount();
+
+var splide = new Splide( '#splideSertificate', {
+  type   : 'loop',
+  perPage: 5,
+  perMove: 1,
+  pagination: boolean = false,
+} ).mount();
 
 
-var tooltipTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggle="tooltip"]'))
-var tooltipList = tooltipTriggerList.map(function (tooltipTriggerEl) {
-  return new bootstrap.Tooltip(tooltipTriggerEl)
-})
+var splide = new Splide( '#splidePortfolio', {
+  type   : 'loop',
+  perPage: 4,
+  perMove: 1,
+  pagination: boolean = false,
+} ).mount();
+
+
+
+
+
+
+
