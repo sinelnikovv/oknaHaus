@@ -12,48 +12,50 @@
 
 
 </head>
-<body>
+<body data-bs-spy="scroll" data-bs-target="#navbar">
 
-  <div class="container p-0">
-    <nav class="navbar navbar-expand-xl navbar-light">
-      <div class="container-fluid p-xl-0">
-        <a class="navbar-brand" href="#"><img src="img/logo.png" alt=""></a>
-          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-          </button>
-        <div class="collapse navbar-collapse" id="navbarNav">
-          <ul class="navbar-nav justify-content-between flex-fill text-center">
-            <li class="nav-item">
-              <a class="nav-link" aria-current="page" href="#ourServices">Услуги</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#products">Продукция</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#">О компании</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#">Портфолио</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#">Вопрос-ответ</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#">Контакты</a>
-            </li>                  
-          </ul>
-          <div class="modal_buttons ms-auto d-flex flex-column flex-xl-row">
-            <button type="button" class="btn btn__hover btn__nav"  data-bs-toggle="modal" data-bs-target="#zamer">
-              <img src="img/length.svg" alt=""> Заявка на замер
+  <section id="nav" class="sticky-top">
+    <div class="container p-0 h-100" id="navbar">
+      <nav class="navbar navbar-expand-xl navbar-light h-100">
+        <div class="container-fluid h-100">
+          <a class="navbar-brand" href="#"><img src="img/logo.png" alt=""></a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+              <span class="navbar-toggler-icon"></span>
             </button>
-            <button type="button" class="btn btn__reverse btn__nav" data-bs-toggle="modal" data-bs-target="#exampleModal">
-              <img src="img/calc.svg" alt="">Заказать расчет
-            </button>
+          <div class="collapse navbar-collapse bg-white h-100" id="navbarNav">
+            <ul class="navbar-nav justify-content-between flex-fill text-center">
+              <li class="nav-item">
+                <a class="nav-link" aria-current="page" href="#our_services">Услуги</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#products">Продукция</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#about_us">О компании</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#portfolio">Портфолио</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#faq">Вопрос-ответ</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#contacts">Контакты</a>
+              </li>
+            </ul>
+            <div class="modal_buttons ms-auto d-flex flex-column flex-xl-row">
+              <button type="button" class="btn btn__hover btn__nav"  data-bs-toggle="modal" data-bs-target="#zamer">
+                <img src="img/length.svg" alt=""> Заявка на замер
+              </button>
+              <button type="button" class="btn btn__reverse btn__nav" data-bs-toggle="modal" data-bs-target="#exampleModal">
+                <img src="img/calc.svg" alt="">Заказать расчет
+              </button>
+            </div>
           </div>
         </div>
-      </div>
-    </nav>
-  </div>
+      </nav>
+    </div>
+  </section>
 
   <section id="banner">
     <div class="container">
@@ -114,9 +116,9 @@
     </div>
   </section>
 
-  <section id="ourServices">
+  <section id="our_services">
     <div class="container p-0">
-      <h2 class="h2 text-center ourServicesHeader mx-auto">Наши услуги</h2>
+      <h2 class="h2 text-center our_services_header mx-auto">Наши услуги</h2>
       <div class="row frow">
         <div class="col-12 col-lg-6">
           <div class="serviceCard serviceCard__1">
@@ -177,58 +179,537 @@
   <section id="products">
 
     <div class="container p-0">
-      <h2 class="h2 text-center">Продукция</h2>
 
-      <!-- <div class="div"></div> слацдер или табс -->
+      <h2 class="h2 text-center mb-5">Продукция</h2>
+
+      <ul class="pills nav justify-content-center" id="pills-tab" role="tablist">
+
+        <li class="nav-item" role="presentation">
+          <button class="nav-link active" id="pills-standart-tab" data-bs-toggle="pill" data-bs-target="#pills-standart" type="button"
+            role="tab" aria-controls="pills-standart" aria-selected="true">Стандарт</button>
+        </li>
+
+        <li class="nav-item" role="presentation">
+          <button class="nav-link" id="pills-business-tab" data-bs-toggle="pill" data-bs-target="#pills-business" type="button"
+            role="tab" aria-controls="pills-business" aria-selected="false">Бизнес</button>
+        </li>
+
+        <li class="nav-item" role="presentation">
+          <button class="nav-link" id="pills-premium-tab" data-bs-toggle="pill" data-bs-target="#pills-premium" type="button"
+            role="tab" aria-controls="pills-premium" aria-selected="false">Премиум</button>
+        </li>
+
+        <li class="nav-item" role="presentation">
+          <button class="nav-link" id="pills-exclusive-tab" data-bs-toggle="pill" data-bs-target="#pills-exclusive" type="button"
+            role="tab" aria-controls="pills-exclusive" aria-selected="false">Эксклюзив</button>
+        </li>
+
+      </ul>
+
+      <div class="tab-content" id="pills-tabContent">
+
+        <div class="tab-pane fade show active" id="pills-standart" role="tabpanel" aria-labelledby="pills-standart-tab">
+
+          <div class="splide" id="splide_products_standart">
+
+            <div class="splide__arrows">
+              <button class="splide__arrow splide__arrow--prev">
+                <svg width="26" height="49" viewBox="0 0 26 49" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M1.25 0.5L25.25 24.5L1.25 48.5" />
+                </svg>
+
+
+              </button>
+              <button class="splide__arrow splide__arrow--next">
+                <svg width="26" height="49" viewBox="0 0 26 49" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M1.25 0.5L25.25 24.5L1.25 48.5" />
+                </svg>
+              </button>
+            </div>
+
+            <div class="splide__track">
+              <ul class="splide__list">
+
+                <li class="splide__slide">
+
+                  <div class="product">
+                    
+                    <div class="row">
+                      <div class="col-12 col-xl-6 d-flex justify-content-center ">
+                        <img src="img/product1.png" alt="Standart window">
+                      </div>
+                      <div class="col-12 col-xl-6 d-flex align-items-center justify-content-center bg-white p-0">
+                        <div class="product_text">
+                          <h3 class="text-center text-xl-start">Rehau Blitz New</h3>
+                          <p>Сохраняют тепло в доме, защищают от шума и вписываются в любой интерьер. <br> Практичный выбор</p>
+                          <ul>
+                            <li>
+                              <p>Системная глубина</p>
+                              <div class="dotted"></div>
+                              <p>60/60 мм</p>
+                            </li>
+                            <li>
+                              <p>Ширина стеклопакета</p>
+                              <div class="dotted"></div>
+                              <p>24/31 мм</p>
+                            </li>
+                            <li>
+                              <p>Воздушные камеры</p>
+                              <div class="dotted"></div>
+                              <p>3</p>
+                            </li>
+                            <li>
+                              <p>Теплосопротивление</p>
+                              <div class="dotted"></div>
+                              <p>0,70 м2С/ВТ</p>
+                            </li>
+                          </ul>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
+
+                </li>
+
+                <li class="splide__slide">
+                
+                  <div class="product">
+                
+                    <div class="row">
+                      <div class="col-12 col-xl-6">
+                        <img src="img/product1.png" alt="Standart window">
+                      </div>
+                      <div class="col-12 col-xl-6 d-flex align-items-center">
+                        <div class="product_text">
+                          <h3>Rehau Blitz New</h3>
+                          <p>Сохраняют тепло в доме, защищают от шума и вписываются в любой интерьер. <br> Практичный выбор</p>
+                          <ul>
+                            <li>
+                              <p>Системная глубина</p>
+                              <div class="dotted"></div>
+                              <p>60/60 мм</p>
+                            </li>
+                            <li>
+                              <p>Ширина стеклопакета</p>
+                              <div class="dotted"></div>
+                              <p>24/31 мм</p>
+                            </li>
+                            <li>
+                              <p>Воздушные камеры</p>
+                              <div class="dotted"></div>
+                              <p>3</p>
+                            </li>
+                            <li>
+                              <p>Теплосопротивление</p>
+                              <div class="dotted"></div>
+                              <p>0,70 м2С/ВТ</p>
+                            </li>
+                          </ul>
+                        </div>
+                      </div>
+                    </div>
+                  </div>      
+                
+                </li>
+
+              </ul>
+            </div>
+
+          </div>
+
+        </div>
+
+        <div class="tab-pane fade" id="pills-business" role="tabpanel" aria-labelledby="pills-business-tab">
+          
+          <div class="splide" id="splide_products_business">
+        
+            <div class="splide__arrows">
+              <button class="splide__arrow splide__arrow--prev">
+                <svg width="26" height="49" viewBox="0 0 26 49" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M1.25 0.5L25.25 24.5L1.25 48.5" />
+                </svg>
+          
+          
+              </button>
+              <button class="splide__arrow splide__arrow--next">
+                <svg width="26" height="49" viewBox="0 0 26 49" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M1.25 0.5L25.25 24.5L1.25 48.5" />
+                </svg>
+              </button>
+            </div>
+        
+        
+          <div class="splide__track">
+            <ul class="splide__list">
+        
+              <li class="splide__slide">
+        
+                <div class="product">
+        
+                  <div class="row">
+                    <div class="col-12 col-xl-6">
+                      <img src="img/product1.png" alt="Standart window">
+                    </div>
+                    <div class="col-12 col-xl-6 d-flex align-items-center">
+                      <div class="product_text">
+                        <h3>Rehau Blitz Business</h3>
+                        <p>Сохраняют тепло в доме, защищают от шума и вписываются в любой интерьер. <br> Практичный выбор</p>
+                        <ul>
+                          <li>
+                            <p>Системная глубина</p>
+                            <div class="dotted"></div>
+                            <p>60/60 мм</p>
+                          </li>
+                          <li>
+                            <p>Ширина стеклопакета</p>
+                            <div class="dotted"></div>
+                            <p>24/31 мм</p>
+                          </li>
+                          <li>
+                            <p>Воздушные камеры</p>
+                            <div class="dotted"></div>
+                            <p>3</p>
+                          </li>
+                          <li>
+                            <p>Теплосопротивление</p>
+                            <div class="dotted"></div>
+                            <p>0,70 м2С/ВТ</p>
+                          </li>
+                        </ul>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+        
+        
+              </li>
+        
+              <li class="splide__slide">
+        
+                <div class="product">
+        
+                  <div class="row">
+                    <div class="col-12 col-xl-6">
+                      <img src="img/product1.png" alt="Standart window">
+                    </div>
+                    <div class="col-12 col-xl-6 d-flex align-items-center">
+                      <div class="product_text">
+                        <h3>Rehau Blitz New</h3>
+                        <p>Сохраняют тепло в доме, защищают от шума и вписываются в любой интерьер. <br> Практичный выбор</p>
+                        <ul>
+                          <li>
+                            <p>Системная глубина</p>
+                            <div class="dotted"></div>
+                            <p>60/60 мм</p>
+                          </li>
+                          <li>
+                            <p>Ширина стеклопакета</p>
+                            <div class="dotted"></div>
+                            <p>24/31 мм</p>
+                          </li>
+                          <li>
+                            <p>Воздушные камеры</p>
+                            <div class="dotted"></div>
+                            <p>3</p>
+                          </li>
+                          <li>
+                            <p>Теплосопротивление</p>
+                            <div class="dotted"></div>
+                            <p>0,70 м2С/ВТ</p>
+                          </li>
+                        </ul>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+        
+              </li>
+        
+            </ul>
+          </div>
+          </div>
+        </div>
+
+        <div class="tab-pane fade" id="pills-premium" role="tabpanel" aria-labelledby="pills-premium-tab">
+
+          <div class="splide" id="splide_products_premium">
+          
+            <div class="splide__arrows">
+              <button class="splide__arrow splide__arrow--prev">
+                <svg width="26" height="49" viewBox="0 0 26 49" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M1.25 0.5L25.25 24.5L1.25 48.5" />
+                </svg>
+          
+          
+              </button>
+              <button class="splide__arrow splide__arrow--next">
+                <svg width="26" height="49" viewBox="0 0 26 49" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M1.25 0.5L25.25 24.5L1.25 48.5" />
+                </svg>
+              </button>
+            </div>
+          
+          
+            <div class="splide__track">
+              <ul class="splide__list">
+          
+                <li class="splide__slide">
+          
+                  <div class="product">
+          
+                    <div class="row">
+                      <div class="col-12 col-xl-6">
+                        <img src="img/product1.png" alt="Standart window">
+                      </div>
+                      <div class="col-12 col-xl-6 d-flex align-items-center">
+                        <div class="product_text">
+                          <h3>Rehau Blitz Business</h3>
+                          <p>Сохраняют тепло в доме, защищают от шума и вписываются в любой интерьер. <br> Практичный выбор</p>
+                          <ul>
+                            <li>
+                              <p>Системная глубина</p>
+                              <div class="dotted"></div>
+                              <p>60/60 мм</p>
+                            </li>
+                            <li>
+                              <p>Ширина стеклопакета</p>
+                              <div class="dotted"></div>
+                              <p>24/31 мм</p>
+                            </li>
+                            <li>
+                              <p>Воздушные камеры</p>
+                              <div class="dotted"></div>
+                              <p>3</p>
+                            </li>
+                            <li>
+                              <p>Теплосопротивление</p>
+                              <div class="dotted"></div>
+                              <p>0,70 м2С/ВТ</p>
+                            </li>
+                          </ul>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+          
+          
+                </li>
+          
+                <li class="splide__slide">
+          
+                  <div class="product">
+          
+                    <div class="row">
+                      <div class="col-12 col-xl-6">
+                        <img src="img/product1.png" alt="Standart window">
+                      </div>
+                      <div class="col-12 col-xl-6 d-flex align-items-center">
+                        <div class="product_text">
+                          <h3>Rehau Blitz New</h3>
+                          <p>Сохраняют тепло в доме, защищают от шума и вписываются в любой интерьер. <br> Практичный выбор</p>
+                          <ul>
+                            <li>
+                              <p>Системная глубина</p>
+                              <div class="dotted"></div>
+                              <p>60/60 мм</p>
+                            </li>
+                            <li>
+                              <p>Ширина стеклопакета</p>
+                              <div class="dotted"></div>
+                              <p>24/31 мм</p>
+                            </li>
+                            <li>
+                              <p>Воздушные камеры</p>
+                              <div class="dotted"></div>
+                              <p>3</p>
+                            </li>
+                            <li>
+                              <p>Теплосопротивление</p>
+                              <div class="dotted"></div>
+                              <p>0,70 м2С/ВТ</p>
+                            </li>
+                          </ul>
+                                                </div>
+                                              </div>
+                                            </div>
+                                    
+                                          </li>
+                                    
+                                        </ul>
+                        </div>
+          </div>
+        </div>
+
+        
+        <div class="tab-pane fade" id="pills-exclusive" role="tabpanel" aria-labelledby="pills-exclusive-tab">
+        
+          <div class="splide" id="splide_products_exclusive">
+        
+            <div class="splide__arrows">
+              <button class="splide__arrow splide__arrow--prev">
+                <svg width="26" height="49" viewBox="0 0 26 49" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M1.25 0.5L25.25 24.5L1.25 48.5" />
+                </svg>
+        
+        
+              </button>
+              <button class="splide__arrow splide__arrow--next">
+                <svg width="26" height="49" viewBox="0 0 26 49" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M1.25 0.5L25.25 24.5L1.25 48.5" />
+                </svg>
+              </button>
+            </div>
+        
+        
+            <div class="splide__track">
+              <ul class="splide__list">
+        
+                <li class="splide__slide">
+        
+                  <div class="product">
+        
+                    <div class="row">
+                      <div class="col-12 col-xl-6">
+                        <img src="img/product1.png" alt="Standart window">
+                      </div>
+                      <div class="col-12 col-xl-6 d-flex align-items-center">
+                        <div class="product_text">
+                          <h3>Rehau Blitz Business</h3>
+                          <p>Сохраняют тепло в доме, защищают от шума и вписываются в любой интерьер. <br> Практичный выбор</p>
+                          <ul>
+                            <li>
+                              <p>Системная глубина</p>
+                              <div class="dotted"></div>
+                              <p>60/60 мм</p>
+                            </li>
+                            <li>
+                              <p>Ширина стеклопакета</p>
+                              <div class="dotted"></div>
+                              <p>24/31 мм</p>
+                            </li>
+                            <li>
+                              <p>Воздушные камеры</p>
+                              <div class="dotted"></div>
+                              <p>3</p>
+                            </li>
+                            <li>
+                              <p>Теплосопротивление</p>
+                              <div class="dotted"></div>
+                              <p>0,70 м2С/ВТ</p>
+                            </li>
+                          </ul>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+        
+        
+                </li>
+        
+                <li class="splide__slide">
+        
+                  <div class="product">
+        
+                    <div class="row">
+                      <div class="col-12 col-xl-6">
+                        <img src="img/product1.png" alt="Standart window">
+                      </div>
+                      <div class="col-12 col-xl-6 d-flex align-items-center">
+                        <div class="product_text">
+                          <h3>Rehau Blitz New</h3>
+                          <p>Сохраняют тепло в доме, защищают от шума и вписываются в любой интерьер. <br> Практичный выбор</p>
+                          <ul>
+                            <li>
+                              <p>Системная глубина</p>
+                              <div class="dotted"></div>
+                              <p>60/60 мм</p>
+                            </li>
+                            <li>
+                              <p>Ширина стеклопакета</p>
+                              <div class="dotted"></div>
+                              <p>24/31 мм</p>
+                            </li>
+                            <li>
+                              <p>Воздушные камеры</p>
+                              <div class="dotted"></div>
+                              <p>3</p>
+                            </li>
+                            <li>
+                              <p>Теплосопротивление</p>
+                              <div class="dotted"></div>
+                              <p>0,70 м2С/ВТ</p>
+                            </li>
+                          </ul>
+                                                </div>
+                                              </div>
+                                            </div>
+                                  
+                                          </li>
+                                  
+                                        </ul>
+                        </div>
+            </div>
+          </div>
+        
+        </div>
+            
+      
+    </div>
+        
+  </section>
+
+  <section id="standart">
+    <div class="container">
       <div class="schtandart">
         <img class="schtandart_logo d-block mx-auto " src="img/logoSchtandart.png" alt="">
-        <div class="shtandart_waranty d-flex flex-wrap justify-content-between align-items-center">
-          <div class="waranty">
-            <img src="img/schtandart1.svg" alt="Сертифицированный 
-        производитель Rehau">
+        <div class="shtandart_waranty justify-content-center justify-content-xl-between align-items-center row">
+          <div class="waranty col-12 col-md-6 col-xl-auto">
+            <img src="img/schtandart1.svg" alt="Сертифицированный
+              производитель Rehau">
             <p>Сертифицированный<br>
               производитель Rehau</p>
           </div>
-          <div class="waranty">
-            <img src="img/schtandart2.svg" alt="Инновационный 
-        оконный завод">
+          <div class="waranty col-12 col-md-6 col-xl-auto">
+            <img src="img/schtandart2.svg" alt="Инновационный
+              оконный завод">
             <p>Инновационный<br>
               оконный завод</p>
           </div>
-          <div class="waranty">
-            <img src="img/schtandart3.svg" alt="Лидер по переработке 
-        профилей Rehau в России">
+          <div class="waranty col-12 col-md-6 col-xl-auto">
+            <img src="img/schtandart3.svg" alt="Лидер по переработке
+              профилей Rehau в России">
             <p>Лидер по переработке<br>
               профилей Rehau в России</p>
           </div>
-          <div class="waranty">
-            <img src="img/schtandart4.svg" alt="Высокотехнологичное 
-        автоматизированное 
-        оборудование">
+          <div class="waranty col-12 col-md-6 col-xl-auto">
+            <img src="img/schtandart4.svg" alt="Высокотехнологичное
+              автоматизированное
+              оборудование">
             <p>Высокотехнологичное<br>
               автоматизированное<br>
               оборудование</p>
           </div>
-          <div class="waranty">
-            <img src="img/schtandart5.svg" alt="Широкий 
-        ассортимент 
-        продукции">
+          <div class="waranty col-12 col-md-6 col-xl-auto">
+            <img src="img/schtandart5.svg" alt="Широкий
+              ассортимент
+              продукции">
             <p>Широкий<br>
               ассортимент<br>
               продукции</p>
           </div>
         </div>
       </div>
-    </div>
-    <div class="schtandart__button">
-      <button type="button" class="btn btn__reverse btn__nav d-block mx-auto" data-bs-toggle="modal"
-        data-bs-target="#exampleModal">
-        <img src="img/calc.svg" alt="">Заказать расчет
-      </button>
+      <div class="schtandart__button">
+        <button type="button" class="btn btn__reverse btn__nav d-block mx-auto" data-bs-toggle="modal"
+          data-bs-target="#exampleModal">
+          <img src="img/calc.svg" alt="">Заказать расчет
+        </button>
+      </div>
     </div>
   </section>
   
-  <section id="about_us">
+  <!-- <section id="about_us">
 
     <div class="container p-0">
 
@@ -254,81 +735,26 @@
             <button class="nav-link " id="pills-certificate-tab" data-bs-toggle="pill" data-bs-target="#pills-certificate" type="button"
               role="tab" aria-controls="pills-certificate" aria-selected="false">Сертификаты</button>
           </li>
+          
 
         </ul>
 
         <div class="tab-content" id="pills-tabContent">
 
-          <div class="tab-pane fade show active" id="pills-description" role="tabpanel" aria-labelledby="pills-description-tab">
-            <div class="row bg-light">
+          <div class="tab-pane fade show active bg-white" id="pills-description" role="tabpanel" aria-labelledby="pills-description-tab">
+            <div class="row h-100 bg-light">
               <div class="col-12 col-lg-6">
                 <img class="logo" src="img/logo.png" alt="">
                 <p class="about_text">Мы помогаем клиентам подбирать решения, учитывая пожежелания к характеристикам окна и его стоимости. Окно - это объект,
                 которым Вы будете пользоваться много лет, поэтому для нас очень важно, чтобы Вы сделали правильный выбор.</p>
               </div>
-              <div class="col-12 col-lg-6 position-relative p-0">
-              <video class="w-100 h-100" src="#" poster="img/aboutPhoto.png"></video>
-              <button class="play_button"><img src="img/playButton.svg" alt=""></button>
+              <div class="col-12 col-lg-6 position-relative p-0 d-flex justify-content-center justify-content-lg-end">
+              
+                <video class="video flex-shrink-1" src="#" poster="img/aboutPhoto.png"></video>
+                <button class="play_button"><img src="img/playButton.svg" alt=""></button>
+              
               </div>
-            </div>
-
-            <div class="features_list row justify-content-center justify-content-lg-between align-items-start">
-
-              <div class="col-12 col-lg-6 col-xl-4 feature_item">
-                <img src="img/about1.svg" alt="Профессионализм">
-                <div class="feature_item__text">
-                  <h3>Профессионализм</h3>
-                  <p>Бригада профессиональных<br>
-                  мастеров по монтажу<br>
-                  и обслуживанию</p>
-                </div>
-              </div>
-
-              <div class="col-12 col-lg-6 col-xl-4 feature_item">
-                <img src="img/about2.svg" alt="Ценообразование">
-                <div class="feature_item__text">
-                  <h3>Ценообразование</h3>
-                  <p>Лучшие цены на рынке<br> пластиковых окон</p>
-                </div>
-              </div>
-
-              <div class="col-12 col-lg-6 col-xl-4 feature_item">
-                <img src="img/about3.svg" alt="Мобильность">
-                <div class="feature_item__text">
-                  <h3>Мобильность</h3>
-                  <p>Заключение договора<br> на дому</p>
-                </div>
-              </div>
-
-              <div class="col-12 col-lg-6 col-xl-4 feature_item">
-                <img src="img/about4.svg" alt="Лояльность">
-                <div class="feature_item__text">
-                  <h3>Лояльность</h3>
-                  <p>99% клиентов рекомендуют<br> нас своим друзьям</p>
-                </div>
-              </div>
-
-              <div class="col-12 col-lg-6 col-xl-4 feature_item">
-                <img src="img/about5.svg" alt="Скорость">
-                <div class="feature_item__text">
-                  <h3>Скорость</h3>
-                  <p>Короткие сроки<br> установки изделий</p>
-                </div>
-              </div>
-
-              <div class="col-12 col-lg-6 col-xl-4 feature_item">
-                <img src="img/about6.svg" alt="Служба качества">
-                <div class="feature_item__text">
-                  <h3>Служба качества</h3>
-                  <p>Безупречное качество<br> и контроль изделий ПВХ</p>
-                </div>
-              </div>
-
-            </div>
-
-            <button type="button" class="btn btn__hover btn__nav" data-bs-toggle="modal" data-bs-target="#zamer">
-              <img class="me-4" src="img/length.svg" alt=""> Оформить заявку на замер
-            </button>
+            </div>            
 
           </div>
 
@@ -466,8 +892,66 @@
         </div>        
         
       </div>
+
+      <div class="features_list row justify-content-center justify-content-lg-between align-items-start">
+      
+        <div class="col-12 col-lg-6 col-xl-4 feature_item m-3 m-xl-0">
+          <div class="feature_image"><img src="img/about1.svg" alt="Профессионализм"></div>
+          <div class="feature_item__text">
+            <h3>Профессионализм</h3>
+            <p>Бригада профессиональных<br>
+              мастеров по монтажу<br>
+              и обслуживанию</p>
+          </div>
+        </div>
+      
+        <div class="col-12 col-lg-6 col-xl-4 feature_item m-3 m-xl-0">
+          <div class="feature_image"><img src="img/about2.svg" alt="Ценообразование"></div>
+          <div class="feature_item__text">
+            <h3>Ценообразование</h3>
+            <p>Лучшие цены на рынке<br> пластиковых окон</p>
+          </div>
+        </div>
+      
+        <div class="col-12 col-lg-6 col-xl-4 feature_item m-3 m-xl-0">
+          <div class="feature_image"><img src="img/about3.svg" alt="Мобильность"></div>
+          <div class="feature_item__text">
+            <h3>Мобильность</h3>
+            <p>Заключение договора<br> на дому</p>
+          </div>
+        </div>
+      
+        <div class="col-12 col-lg-6 col-xl-4 feature_item m-3 m-xl-0">
+          <div class="feature_image"><img src="img/about4.svg" alt="Лояльность"></div>
+          <div class="feature_item__text">
+            <h3>Лояльность</h3>
+            <p>99% клиентов рекомендуют<br> нас своим друзьям</p>
+          </div>
+        </div>
+      
+        <div class="col-12 col-lg-6 col-xl-4 feature_item m-3 m-xl-0">
+          <div class="feature_image"><img src="img/about5.svg" alt="Скорость"></div>
+          <div class="feature_item__text">
+            <h3>Скорость</h3>
+            <p>Короткие сроки<br> установки изделий</p>
+          </div>
+        </div>
+      
+        <div class="col-12 col-lg-6 col-xl-4 feature_item m-3 m-xl-0">
+          <div class="feature_image"><img src="img/about6.svg" alt="Служба качества"></div>
+          <div class="feature_item__text">
+            <h3>Служба качества</h3>
+            <p>Безупречное качество<br> и контроль изделий ПВХ</p>
+          </div>
+        </div>
+      
+      </div>
+      
+      <button type="button" class="btn btn__hover btn__nav" data-bs-toggle="modal" data-bs-target="#zamer">
+        <img class="me-4" src="img/length.svg" alt=""> Оформить заявку на замер
+      </button>
     </div>
-  </section>
+  </section> -->
 
 <section id="portfolio">
   <div class="container bg-light">
@@ -516,7 +1000,7 @@
   </div>
 </section>
 
-<section id="FAQ">
+<section id="faq">
 
   <div class="container">
 
@@ -622,7 +1106,118 @@
   </div>
 </section>
 
+<section id="contacts">
 
+  <div class="container">
+
+    <h2 class="h2 text-center">Контакты</h2>
+
+    <div class="row">
+      <div class="col-12 col-lg-6">
+
+        <div class="contacts_left">
+          <p class="text-center text-lg-start">Бесплатная консультация:</p>
+          <div class="tels d-flex flex-column flex-xxl-row align-items-center align-items-lg-start  fw-bold mb-5">
+            
+            <p><img class="me-4" src="img/tel.svg" alt="">8 (4932) 34 - 31 - 40</p>
+            <p class="ms-5">8 (905) 109 - 31 - 40</p>
+          </div>
+          <div class="location d-flex align-items-center text-center text-lg-start justify-content-center justify-content-lg-start">
+            <img class="me-4" src="img/location.svg" alt="">
+            <p>г. Иваново, ул. Генерала Хлебникова, д.54, оф.303</p>
+          </div>
+          <div class="mail d-flex align-items-center text-center text-lg-start justify-content-center justify-content-lg-start">
+            <img class="me-4" src="img/email.svg" alt="">
+            <p>okna@haus.ru</p>
+          </div>
+          <div class="contacts_text text-center text-lg-start">
+            <p>Установку должны выполнять только эксперты. Нам доверяют сотни семей. Узнайте поробнее, какие решения вам подходят. Вы
+            можете приобрести недорогие товары при гарантированно высоком качестве.</p>
+            <div class="socials d-flex justify-content-between mx-auto mx-lg-0">
+              <a href="vk.com">
+                <svg width="23" height="22" viewBox="0 0 23 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M21.7478 1.00366H0.634949V20.8465H21.7478V1.00366Z" stroke-width="2" stroke-miterlimit="22.9256"
+                    stroke-linecap="round" stroke-linejoin="round" />
+                  <path
+                    d="M7.59731 14.5911V5.50055H11.0078C11.7023 5.50055 12.2583 5.59356 12.6758 5.77959C13.0975 5.96148 13.4262 6.24466 13.6618 6.62911C13.9016 7.00943 14.0214 7.40836 14.0214 7.82589C14.0214 8.21448 13.916 8.58033 13.7052 8.92344C13.4944 9.26656 13.176 9.54353 12.7503 9.75437C13.3001 9.91559 13.7217 10.1905 14.0152 10.5791C14.3129 10.9677 14.4617 11.4265 14.4617 11.9557C14.4617 12.3815 14.3708 12.7783 14.1889 13.1463C14.0111 13.51 13.7899 13.7911 13.5254 13.9896C13.2608 14.188 12.928 14.3389 12.527 14.4422C12.1302 14.5415 11.6424 14.5911 11.0636 14.5911H7.59731ZM8.80028 9.3203H10.766C11.2992 9.3203 11.6816 9.28516 11.9131 9.21489C12.219 9.12394 12.4485 8.97305 12.6014 8.76222C12.7585 8.55139 12.8371 8.28682 12.8371 7.96851C12.8371 7.66673 12.7647 7.40216 12.62 7.17479C12.4753 6.94329 12.2687 6.7862 11.9999 6.70352C11.7312 6.61671 11.2703 6.57331 10.6171 6.57331H8.80028V9.3203ZM8.80028 13.5183H11.0636C11.4522 13.5183 11.725 13.5038 11.8821 13.4749C12.1591 13.4253 12.3906 13.3426 12.5766 13.2269C12.7627 13.1111 12.9156 12.9437 13.0355 12.7246C13.1554 12.5014 13.2153 12.2451 13.2153 11.9557C13.2153 11.6167 13.1285 11.3232 12.9549 11.0752C12.7813 10.823 12.5394 10.6473 12.2294 10.5481C11.9235 10.4447 11.4811 10.3931 10.9024 10.3931H8.80028V13.5183Z" />
+                </svg>
+              </a>
+              <a href="facebook.com">
+                <svg width="24" height="22" viewBox="0 0 24 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M22.8775 1.00366H1.76468V20.8465H22.8775V1.00366Z"  stroke-width="2"
+                    stroke-miterlimit="22.9256" stroke-linecap="round" stroke-linejoin="round" />
+                  <path
+                    d="M13.6502 20.2893V10.8335H12.0195V9.39772H13.6502V8.23883C13.6502 7.50725 13.7151 6.9637 13.8451 6.60817C14.0228 6.12956 14.3339 5.74327 14.7783 5.44927C15.2296 5.14843 15.8586 4.99802 16.6654 4.99802C17.185 4.99802 17.7593 5.05955 18.3883 5.18262L18.1114 6.79277C17.7286 6.7244 17.3662 6.69021 17.0243 6.69021C16.4637 6.69021 16.0671 6.80986 15.8347 7.04916C15.6022 7.28846 15.486 7.7363 15.486 8.39266V9.39772H17.6089V10.8335H15.486V20.2893H13.6502Z"
+                    />
+                </svg>
+              </a>
+              <a href="instagram.com">
+                <svg width="24" height="22" viewBox="0 0 24 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M22.9597 1.00366H1.84686V20.8465H22.9597V1.00366Z"  stroke-width="2"
+                    stroke-miterlimit="22.9256" stroke-linecap="round" stroke-linejoin="round" />
+                  <path
+                    d="M12.4827 15.1317C14.8498 15.1317 16.7687 13.2128 16.7687 10.8456C16.7687 8.47851 14.8498 6.55957 12.4827 6.55957C10.1155 6.55957 8.19659 8.47851 8.19659 10.8456C8.19659 13.2128 10.1155 15.1317 12.4827 15.1317Z"
+                     stroke-width="2" stroke-miterlimit="22.9256" stroke-linecap="round" stroke-linejoin="round" />
+                  <path
+                    d="M19.6261 5.60721C20.0644 5.60721 20.4198 5.25185 20.4198 4.81349C20.4198 4.37513 20.0644 4.01978 19.6261 4.01978C19.1877 4.01978 18.8324 4.37513 18.8324 4.81349C18.8324 5.25185 19.1877 5.60721 19.6261 5.60721Z"
+                     stroke-width="2" stroke-miterlimit="22.9256" stroke-linecap="round" stroke-linejoin="round" />
+                </svg>
+              </a>
+              <a href="telegram.org">
+                <svg width="25" height="22" viewBox="0 0 25 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M23.0419 1.00366H1.92908V20.8465H23.0419V1.00366Z"  stroke-width="2"
+                    stroke-miterlimit="22.9256" stroke-linecap="round" stroke-linejoin="round" />
+                  <path d="M7.80255 9.73455L18.1208 5.44849L14.946 16.878L10.6599 14.1793L7.6438 14.3381L13.0411 10.8457"
+                     stroke-width="2" stroke-miterlimit="22.9256" stroke-linecap="round" stroke-linejoin="round" />
+                </svg>
+              </a>
+              <a href="youtube.com">
+                <svg width="24" height="22" viewBox="0 0 24 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M22.9654 1.00366H1.85254V20.8465H22.9654V1.00366Z"  stroke-width="2"
+                    stroke-miterlimit="22.9256" stroke-linecap="round" stroke-linejoin="round" />
+                  <path fill-rule="evenodd" clip-rule="evenodd" d="M10.1071 6.40088L16.1394 10.6869L10.1071 14.338V6.40088Z"
+                     stroke-width="2" stroke-miterlimit="22.9256" stroke-linecap="round" stroke-linejoin="round" />
+                </svg>
+              </a>
+              <a href="ok.ru">
+                <svg width="23" height="22" viewBox="0 0 23 22" fill="#fff" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M22.365 1.00366H1.2522V20.8465H22.365V1.00366Z"  stroke-width="2" stroke-miterlimit="22.9256"
+                    stroke-linecap="round" stroke-linejoin="round" />
+                  <path
+                    d="M11.888 10.687C13.5537 10.687 14.9041 9.33666 14.9041 7.6709C14.9041 6.00515 13.5537 4.65479 11.888 4.65479C10.2222 4.65479 8.87186 6.00515 8.87186 7.6709C8.87186 9.33666 10.2222 10.687 11.888 10.687Z"
+                     stroke-width="2" stroke-miterlimit="22.9256" stroke-linecap="round" stroke-linejoin="round" />
+                  <path
+                    d="M15.2216 11.957C14.9041 12.9095 13.4754 13.5445 11.888 13.5445C10.1418 13.5445 8.71312 12.9095 8.39563 11.957"
+                     stroke-width="2" stroke-miterlimit="22.9256" stroke-linecap="round" stroke-linejoin="round" />
+                  <path d="M15.539 16.7193L11.888 13.5444L8.07812 17.0368"  stroke-width="2" stroke-miterlimit="22.9256"
+                    stroke-linecap="round" stroke-linejoin="round" />
+                </svg>
+              </a>
+            </div>
+          </div>
+          <img class="contacts_image" src="img/contacts.png" alt="">
+        </div>
+
+      </div>
+      <div class="col-12 col-lg-6">
+        <div class="form">
+          <h2 class="h2">Остались вопросы?</h2>
+          <form class="d-flex flex-column">
+            
+              <input type="text" placeholder="Ваше имя">            
+              <input type="email" placeholder="E-mail">
+              <textarea name="" id=""  rows="5" placeholder="Ваш отзыв"></textarea>
+              <label class="label"><input class="checkbox" type="checkbox" checked="checked">
+                <span class="checkmark"></span>
+                Согласен на обработку <a href="#" class="personal_data">персональных данных</a>                
+              </label>
+              <button class="btn ">Отправить сообщение</button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
 
 
 
