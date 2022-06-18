@@ -352,10 +352,6 @@ body {
     margin-bottom: 3rem;
   }
 
-  .frow {
-    margin-bottom: 10.25px;
-  }
-
   .serviceCard {
     position: relative;
     height: 100%;
@@ -456,33 +452,41 @@ body {
     }
 
     .splide__arrow--prev {
-      left: -3rem;
+      left: 0.5rem;
+      top: 10rem;
+      @media screen and (min-width: 425px) {
+        top: 13rem;
+      }
+      @media screen and (min-width: 768px) {
+        left: 1rem;
+      }
 
-      @media screen and (max-width: 1400px) {
+      @media screen and (min-width: 1200px) {
         left: -2rem;
       }
 
-      @media screen and (max-width: 1200px) {
-        left: -1rem;
-      }
-
-      @media screen and (max-width: 575px) {
-        left: 0rem;
+      @media screen and (min-width: 1400px) {
+        left: -3rem;
       }
     }
 
     .splide__arrow--next {
-      right: -3rem;
-      @media screen and (max-width: 1400px) {
+      right: 0.5rem;
+      top: 10rem;
+
+      @media screen and (min-width: 425px) {
+        top: 13rem;
+      }
+      @media screen and (min-width: 768px) {
+        right: 1rem;
+      }
+
+      @media screen and (min-width: 1200px) {
         right: -2rem;
       }
 
-      @media screen and (max-width: 1200px) {
-        right: -1rem;
-      }
-
-      @media screen and (max-width: 575px) {
-        right: 0rem;
+      @media screen and (min-width: 1400px) {
+        right: -3rem;
       }
     }
   }
@@ -537,46 +541,48 @@ body {
   }
 }
 
-.schtandart {
-  padding: 2.25rem 5.125rem 5.5rem;
-  background: url(img/schtandart.png) no-repeat center;
-  background-size: cover;
+#schtandart {
+  .schtandart {
+    padding: 2.25rem 5.125rem 5.5rem;
+    background: url(img/schtandart.png) no-repeat center;
+    background-size: cover;
 
-  @media (max-width: 576px) {
-    padding: 1rem;
-  }
-
-  .schtandart_logo {
-    max-width: 305px;
-    margin-bottom: 3.375rem;
     @media (max-width: 576px) {
-      max-width: 200px;
+      padding: 1rem;
+    }
+
+    .schtandart_logo {
+      max-width: 305px;
+      margin-bottom: 3.375rem;
+      @media (max-width: 576px) {
+        max-width: 200px;
+      }
+    }
+
+    .shtandart_waranty {
+      .waranty {
+        flex-direction: column;
+        flex-grow: 0;
+
+        img {
+          display: block;
+          margin: auto;
+        }
+
+        p {
+          color: $white;
+          margin-top: 3rem;
+          text-align: center;
+          font-size: 16px;
+          line-height: 19px;
+        }
+      }
     }
   }
 
-  .shtandart_waranty {
-    .waranty {
-      flex-direction: column;
-      flex-grow: 0;
-
-      img {
-        display: block;
-        margin: auto;
-      }
-
-      p {
-        color: $white;
-        margin-top: 3rem;
-        text-align: center;
-        font-size: 16px;
-        line-height: 19px;
-      }
-    }
+  .schtandart__button {
+    margin-top: 3.5rem;
   }
-}
-
-.schtandart__button {
-  margin-top: 3.5rem;
 }
 
 #about_us {

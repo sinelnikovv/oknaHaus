@@ -224,7 +224,7 @@ body {
 
 .btn__hover:hover {
   color: #fff;
-  background-color: #3B3A63;
+  background-color: #3B3A63 !important;
 }
 
 .btn__reverse {
@@ -447,10 +447,6 @@ body {
   margin-bottom: 3rem;
 }
 
-#our_services .frow {
-  margin-bottom: 10.25px;
-}
-
 #our_services .serviceCard {
   position: relative;
   height: 100%;
@@ -543,46 +539,60 @@ body {
 }
 
 #products .tab-content .splide__arrow--prev {
-  left: -3rem;
+  left: 0.5rem;
+  top: 10rem;
 }
 
-@media screen and (max-width: 1400px) {
+@media screen and (min-width: 425px) {
+  #products .tab-content .splide__arrow--prev {
+    top: 13rem;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  #products .tab-content .splide__arrow--prev {
+    left: 1rem;
+  }
+}
+
+@media screen and (min-width: 1200px) {
   #products .tab-content .splide__arrow--prev {
     left: -2rem;
   }
 }
 
-@media screen and (max-width: 1200px) {
+@media screen and (min-width: 1400px) {
   #products .tab-content .splide__arrow--prev {
-    left: -1rem;
-  }
-}
-
-@media screen and (max-width: 575px) {
-  #products .tab-content .splide__arrow--prev {
-    left: 0rem;
+    left: -3rem;
   }
 }
 
 #products .tab-content .splide__arrow--next {
-  right: -3rem;
+  right: 0.5rem;
+  top: 10rem;
 }
 
-@media screen and (max-width: 1400px) {
+@media screen and (min-width: 425px) {
+  #products .tab-content .splide__arrow--next {
+    top: 13rem;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  #products .tab-content .splide__arrow--next {
+    right: 1rem;
+  }
+}
+
+@media screen and (min-width: 1200px) {
   #products .tab-content .splide__arrow--next {
     right: -2rem;
   }
 }
 
-@media screen and (max-width: 1200px) {
+@media screen and (min-width: 1400px) {
   #products .tab-content .splide__arrow--next {
-    right: -1rem;
-  }
-}
-
-@media screen and (max-width: 575px) {
-  #products .tab-content .splide__arrow--next {
-    right: 0rem;
+    right: -3rem;
   }
 }
 
@@ -641,30 +651,30 @@ body {
   border-bottom: 2px dotted gray;
 }
 
-.schtandart {
+#schtandart .schtandart {
   padding: 2.25rem 5.125rem 5.5rem;
   background: url(img/schtandart.png) no-repeat center;
   background-size: cover;
 }
 
 @media (max-width: 576px) {
-  .schtandart {
+  #schtandart .schtandart {
     padding: 1rem;
   }
 }
 
-.schtandart .schtandart_logo {
+#schtandart .schtandart .schtandart_logo {
   max-width: 305px;
   margin-bottom: 3.375rem;
 }
 
 @media (max-width: 576px) {
-  .schtandart .schtandart_logo {
+  #schtandart .schtandart .schtandart_logo {
     max-width: 200px;
   }
 }
 
-.schtandart .shtandart_waranty .waranty {
+#schtandart .schtandart .shtandart_waranty .waranty {
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
@@ -674,12 +684,12 @@ body {
           flex-grow: 0;
 }
 
-.schtandart .shtandart_waranty .waranty img {
+#schtandart .schtandart .shtandart_waranty .waranty img {
   display: block;
   margin: auto;
 }
 
-.schtandart .shtandart_waranty .waranty p {
+#schtandart .schtandart .shtandart_waranty .waranty p {
   color: #fff;
   margin-top: 3rem;
   text-align: center;
@@ -687,7 +697,7 @@ body {
   line-height: 19px;
 }
 
-.schtandart__button {
+#schtandart .schtandart__button {
   margin-top: 3.5rem;
 }
 

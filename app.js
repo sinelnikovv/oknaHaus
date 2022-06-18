@@ -1,4 +1,34 @@
-var splide = new Splide( '#splideFeedback', {
+var splide = new Splide( '#splide_products_standart', {
+  type   : 'loop',
+  perPage: 1,
+  perMove: 1,
+  pagination: boolean = false,
+}).mount();
+
+var splide = new Splide( '#splide_products_business', {
+  type   : 'loop',
+  perPage: 1,
+  perMove: 1,
+  pagination: boolean = false,
+} ).mount();
+
+var splide = new Splide( '#splide_products_premium', {
+  type   : 'loop',
+  perPage: 1,
+  perMove: 1,
+  pagination: boolean = false,
+}).mount();
+
+var splide = new Splide( '#splide_products_exclusive', {
+  type   : 'loop',
+  perPage: 1,
+  perMove: 1,
+  pagination: boolean = false,
+} ).mount();
+
+
+
+var splide = new Splide('#splideFeedback', {
   type   : 'loop',
   perPage: 1,
   perMove: 1,
@@ -46,33 +76,10 @@ var splide = new Splide( '#splidePortfolio', {
 }).mount();
 
 
-var splide = new Splide( '#splide_products_standart', {
-  type   : 'loop',
-  perPage: 1,
-  perMove: 1,
-  pagination: boolean = false,
-}).mount();
 
-var splide = new Splide( '#splide_products_business', {
-  type   : 'loop',
-  perPage: 1,
-  perMove: 1,
-  pagination: boolean = false,
-} ).mount();
 
-var splide = new Splide( '#splide_products_premium', {
-  type   : 'loop',
-  perPage: 1,
-  perMove: 1,
-  pagination: boolean = false,
-} ).mount();
 
-var splide = new Splide( '#splide_products_exclusive', {
-  type   : 'loop',
-  perPage: 1,
-  perMove: 1,
-  pagination: boolean = false,
-} ).mount();
+
 
 
 
