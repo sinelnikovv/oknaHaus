@@ -27,7 +27,6 @@ var splide = new Splide( '#splide_products_exclusive', {
 } ).mount();
 
 
-
 var splide = new Splide('#splideFeedback', {
   type   : 'loop',
   perPage: 1,

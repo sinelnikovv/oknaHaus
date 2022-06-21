@@ -21,6 +21,12 @@ body {
   height: 100px;
 }
 
+.modal_buttons {
+  img {
+    margin-right: 13px;
+  }
+}
+
 .navbar {
   padding: 0;
   padding-top: 13px;
@@ -151,12 +157,6 @@ body {
       }
     }
   }
-
-  .modal_buttons {
-    img {
-      margin-right: 13px;
-    }
-  }
 }
 
 .btn {
@@ -164,6 +164,11 @@ body {
   background-color: $primary;
   font-size: 18px;
   border: none;
+
+  &:focus {
+    outline: none;
+    box-shadow: none;
+  }
 
   &__hover {
     &:hover {
@@ -543,7 +548,7 @@ body {
 
 #schtandart {
   .schtandart {
-    padding: 2.25rem 5.125rem 5.5rem;
+    padding: 2.25rem 5.125rem 0rem;
     background: url(img/schtandart.png) no-repeat center;
     background-size: cover;
 
@@ -563,6 +568,7 @@ body {
       .waranty {
         flex-direction: column;
         flex-grow: 0;
+        margin-bottom: 4.375rem;
 
         img {
           display: block;
@@ -607,7 +613,6 @@ body {
     }
 
     .video {
-      max-width: 595px;
       width: 100%;
       height: auto;
     }
@@ -629,21 +634,31 @@ body {
 
     .tab-pane {
       min-height: 460px;
+      margin-top: 1.5rem;
+      margin-bottom: 4.25rem;
     }
   }
 
   #pills-description {
-    margin-bottom: 5.375rem;
-
     .logo {
-      margin-top: 45px;
-      margin-left: 50px;
+      display: block;
+      margin: 2rem auto;
+      @media screen and (min-width: 992px) {
+        margin: 45px 0 0 50px;
+        margin-top: 45px;
+        margin-left: 50px;
+      }
     }
 
     .about_text {
-      line-height: 1.375rem;
-      max-width: 305px;
-      margin: 3.875rem 3.25rem 0 auto;
+      margin: 2rem;
+      text-align: center;
+      @media screen and (min-width: 992px) {
+        line-height: 1.375rem;
+        max-width: 305px;
+        margin: 3.875rem 3.25rem 0 auto;
+        text-align: left;
+      }
     }
 
     .play_button {
@@ -747,7 +762,7 @@ body {
 
   .features_list {
     min-height: 450px;
-    padding: 70px 40px 85px;
+    padding: 70px 0 85px;
 
     .feature_image {
       max-width: 115px;
@@ -757,8 +772,15 @@ body {
 
     .feature_item {
       display: flex;
+      flex-direction: column;
       max-width: 370px;
-      align-items: flex-start;
+      align-items: center;
+      text-align: center;
+
+      @media screen and (min-width: 425px) {
+        flex-direction: row;
+        text-align: left;
+      }
 
       img {
         margin-right: 1.5rem;
@@ -817,6 +839,9 @@ body {
 }
 
 #faq {
+  .faq_header {
+    margin-bottom: 3.125rem;
+  }
   .container {
     padding: 2.5rem 6.25rem 4rem;
     margin-bottom: 5.375rem;
@@ -833,6 +858,7 @@ body {
 
       .accordion-button {
         background: #eeeef3;
+        font-weight: 700;
 
         &:not(.collapsed) {
           color: $secondary;
@@ -871,57 +897,196 @@ body {
   .row {
     padding-top: 3.75rem;
 
+    .contacts_left {
+      position: relative;
+      padding-bottom: 7.5rem;
+      .free_cons {
+        font-size: 18px;
+      }
+      p {
+        margin: 0;
+      }
+      .tels {
+        p {
+          margin: 0;
+          font-size: 1.375rem;
+          line-height: 2.25;
+        }
+      }
+
+      .location {
+        margin-bottom: 0.75rem;
+        font-size: 18px;
+        font-size: 18px;
+        line-height: 21px;
+      }
+
+      .mail {
+        font-size: 18px;
+        font-size: 18px;
+        line-height: 21px;
+      }
+      .contacts_text {
+        position: relative;
+        z-index: 99;
+        font-size: 16px;
+        line-height: 22px;
+        color: #2f2f51;
+        margin-top: 3.625rem;
+        max-width: 230px;
+      }
+
+      .socials {
+        margin-top: 1.75rem;
+        width: 200px;
+
+        a:hover {
+          svg {
+            stroke: $secondary;
+          }
+        }
+        svg {
+          stroke: $primary;
+        }
+      }
+    }
+    .contacts_image {
+      position: absolute;
+      z-index: 2;
+      z-index: 9;
+      bottom: 0;
+      right: -4.5rem;
+    }
+
     .form {
+      position: relative;
+      z-index: -1;
       max-width: 510px;
       margin: 0 auto;
       background: $white;
       border-radius: 10px;
       filter: $drop-shadow;
       padding: 3.5rem 3.75rem 3.125rem;
+      h2 {
+        margin-bottom: 1.875rem;
+      }
+
+      input {
+        padding: 1rem;
+        background: #e2e2e2;
+        border: none;
+        border-radius: 3px;
+        margin-bottom: 1.375rem;
+        font-size: 16px;
+        line-height: 18.75px;
+
+        &::placeholder {
+          font-weight: 400;
+          font-size: 14px;
+          line-height: 16px;
+
+          color: #424268;
+        }
+      }
+
+      textarea {
+        padding: 0.75rem 1rem;
+        background: #e2e2e2;
+        border: none;
+        border-radius: 3px;
+        margin-bottom: 15px;
+        font-size: 14px;
+        line-height: 16px;
+
+        &::placeholder {
+          font-weight: 400;
+          font-size: 14px;
+          line-height: 16px;
+
+          color: #424268;
+        }
+      }
+
+      .label {
+        position: relative;
+        padding-left: 35px;
+        font-size: 14px;
+        line-height: 16px;
+
+        .checkbox {
+          position: absolute;
+          opacity: 0;
+          height: 0;
+          width: 0;
+        }
+
+        .checkmark {
+          position: absolute;
+          top: -5px;
+          left: 0;
+          width: 25px;
+          height: 25px;
+          background: #e2e2e2;
+          border-radius: 3px;
+        }
+
+        .checkmark:after {
+          content: "";
+          position: absolute;
+          display: none;
+        }
+
+        input:checked ~ .checkmark:after {
+          display: block;
+        }
+
+        .checkmark:after {
+          content: url(img/check.svg);
+          left: 6px;
+          bottom: 6px;
+          width: 20px;
+          height: 21px;
+        }
+      }
+
+      .personal_data {
+        color: $primary;
+      }
+
+      button {
+        margin: 2rem auto 0;
+        padding: 1rem 2.75rem;
+        font-size: 16px;
+        font-weight: 700;
+        border: none;
+        border-radius: 3px;
+        color: $white;
+        cursor: pointer;
+        transition: all 0.3s ease-in-out;
+      }
     }
   }
-  .contacts_left {
-    position: relative;
-    padding-left: 3.125rem;
-    padding-bottom: 7.5rem;
+}
+
+footer {
+  background: $hover;
+  padding: 3.25rem 0;
+  .footer_left {
     p {
       margin: 0;
     }
-    .tels {
-      p {
-        margin: 0;
-        font-size: 1.375rem;
-        line-height: 2.25;
+    img {
+      width: 55px;
+      margin-right: 1.375rem;
+    }
+  }
+  .footer_right {
+    a {
+      color: $white;
+      text-decoration: none;
+      &:hover {
+        color: $primary;
       }
-    }
-
-    .location {
-      margin-bottom: 0.75rem;
-    }
-
-    .contacts_text {
-      margin-top: 3.875rem;
-      max-width: 230px;
-    }
-
-    .socials {
-      margin-top: 1.75rem;
-      width: 200px;
-
-      a:hover {
-        svg {
-          stroke: $secondary;
-        }
-      }
-      svg {
-        stroke: $primary;
-      }
-    }
-    .contacts_image {
-      position: absolute;
-      z-index: 9;
-      bottom: 0;
-      right: -4.5rem;
     }
   }
 }
@@ -947,10 +1112,138 @@ body {
   .modal-xl {
     max-width: 1000px;
   }
+}
 
-  .btn-close {
-    position: absolute;
-    top: 33px;
-    right: 31px;
+.nav_modals {
+  .modal-dialog {
+    max-width: 595px;
+  }
+  .modal-content {
+    border-radius: 10px;
+    filter: $drop-shadow;
+
+    .modal-body {
+      padding: 3.5rem 6.25rem;
+      position: relative;
+
+      .btn-close {
+        position: absolute;
+        top: 25px;
+        right: 20px;
+        border: 0;
+        border-radius: 0.25rem;
+        background: none;
+      }
+      h2 {
+        color: $white;
+        margin-bottom: 2rem;
+        img {
+          margin-right: 1.625rem;
+        }
+      }
+      form {
+        input {
+          padding: 1rem;
+          background: $white;
+          border: none;
+          border-radius: 3px;
+          margin-bottom: 1.125rem;
+          font-size: 16px;
+          line-height: 18.75px;
+
+          &::placeholder {
+            font-weight: 400;
+            font-size: 14px;
+            line-height: 16px;
+
+            color: #424268;
+          }
+        }
+
+        .label {
+          position: relative;
+          padding-left: 35px;
+          font-size: 14px;
+          line-height: 16px;
+          color: $white;
+
+          .checkbox {
+            position: absolute;
+            opacity: 0;
+            height: 0;
+            width: 0;
+          }
+
+          .checkmark {
+            position: absolute;
+            top: -5px;
+            left: 0;
+            width: 25px;
+            height: 25px;
+            background: $white;
+            border-radius: 3px;
+          }
+
+          .checkmark:after {
+            content: "";
+            position: absolute;
+            display: none;
+          }
+
+          input:checked ~ .checkmark:after {
+            display: block;
+          }
+
+          .checkmark:after {
+            content: url(img/check.svg);
+            left: 6px;
+            bottom: 6px;
+            width: 20px;
+            height: 21px;
+          }
+        }
+
+        .personal_data {
+          color: $primary;
+          text-decoration: none;
+        }
+
+        button {
+          margin: 2rem auto 0;
+          padding: 1rem 2.75rem;
+          font-size: 16px;
+          font-weight: 700;
+          border: none;
+          border-radius: 3px;
+          background: $white;
+          cursor: pointer;
+          transition: all 0.3s ease-in-out;
+        }
+      }
+    }
+  }
+}
+
+#zamer {
+  .modal-content {
+    background: $primary;
+    .personal_data {
+      color: $hover;
+    }
+    button {
+      color: $primary;
+    }
+  }
+}
+
+#raschet {
+  .modal-content {
+    background: $hover;
+    .personal_data {
+      color: $primary;
+    }
+    button {
+      color: $hover;
+    }
   }
 }

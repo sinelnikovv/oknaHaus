@@ -49,7 +49,7 @@
               <button type="button" class="btn btn__hover btn__nav"  data-bs-toggle="modal" data-bs-target="#zamer">
                 <img src="img/length.svg" alt=""> Заявка на замер
               </button>
-              <button type="button" class="btn btn__reverse btn__nav" data-bs-toggle="modal" data-bs-target="#exampleModal">
+              <button type="button" class="btn btn__reverse btn__nav" data-bs-toggle="modal" data-bs-target="#raschet">
                 <img src="img/calc.svg" alt="">Заказать расчет
               </button>
             </div>
@@ -675,7 +675,7 @@
         
   </section>
 
-  <!-- <section id="standart">
+  <section id="schtandart">
     <div class="container">
       <div class="schtandart">
         <img class="schtandart_logo d-block mx-auto " src="img/logoSchtandart.png" alt="">
@@ -717,7 +717,7 @@
         </div>
       </div>
       <div class="schtandart__button">
-        <button type="button" class="btn btn__reverse btn__nav d-block mx-auto" data-bs-toggle="modal"
+        <button type="button" class="btn btn__reverse btn__nav d-block mx-auto modal_buttons" data-bs-toggle="modal"
           data-bs-target="#exampleModal">
           <img src="img/calc.svg" alt="">Заказать расчет
         </button>
@@ -758,15 +758,17 @@
         <div class="tab-content" id="pills-tabContent">
 
           <div class="tab-pane fade show active bg-white" id="pills-description" role="tabpanel" aria-labelledby="pills-description-tab">
-            <div class="row">
+            <div class="row m-0">
               <div class="col-12 col-lg-6">
                 <img class="logo" src="img/logo.png" alt="">
                 <p class="about_text">Мы помогаем клиентам подбирать решения, учитывая пожежелания к характеристикам окна и его стоимости. Окно - это объект,
                 которым Вы будете пользоваться много лет, поэтому для нас очень важно, чтобы Вы сделали правильный выбор.</p>
               </div>
-              <div class="col-12 col-lg-6 position-relative p-0 d-flex justify-content-center justify-content-lg-end">
+              <div class="col-12 col-lg-6 position-relative p-0">
               
-                <video class="video flex-shrink-1" src="#" poster="img/aboutPhoto.png"></video>
+                
+                  <video class="video" src="#" poster="img/aboutPhoto.png"></video>
+                
                 <button class="play_button"><img src="img/playButton.svg" alt=""></button>
               
               </div>
@@ -911,7 +913,7 @@
 
       <div class="features_list row justify-content-center justify-content-lg-between align-items-start">
       
-        <div class="col-12 col-lg-6 col-xl-4 feature_item m-3 m-xl-0">
+        <div class="col-12 col-md-6 col-xl-4 feature_item m-3 m-xl-0">
           <div class="feature_image"><img src="img/about1.svg" alt="Профессионализм"></div>
           <div class="feature_item__text">
             <h3>Профессионализм</h3>
@@ -921,7 +923,7 @@
           </div>
         </div>
       
-        <div class="col-12 col-lg-6 col-xl-4 feature_item m-3 m-xl-0">
+        <div class="col-12 col-md-6 col-xl-4 feature_item m-3 m-xl-0">
           <div class="feature_image"><img src="img/about2.svg" alt="Ценообразование"></div>
           <div class="feature_item__text">
             <h3>Ценообразование</h3>
@@ -929,7 +931,7 @@
           </div>
         </div>
       
-        <div class="col-12 col-lg-6 col-xl-4 feature_item m-3 m-xl-0">
+        <div class="col-12 col-md-6 col-xl-4 feature_item m-3 m-xl-0">
           <div class="feature_image"><img src="img/about3.svg" alt="Мобильность"></div>
           <div class="feature_item__text">
             <h3>Мобильность</h3>
@@ -937,7 +939,7 @@
           </div>
         </div>
       
-        <div class="col-12 col-lg-6 col-xl-4 feature_item m-3 m-xl-0">
+        <div class="col-12 col-md-6 col-xl-4 feature_item m-3 m-xl-0">
           <div class="feature_image"><img src="img/about4.svg" alt="Лояльность"></div>
           <div class="feature_item__text">
             <h3>Лояльность</h3>
@@ -945,7 +947,7 @@
           </div>
         </div>
       
-        <div class="col-12 col-lg-6 col-xl-4 feature_item m-3 m-xl-0">
+        <div class="col-12 col-md-6 col-xl-4 feature_item m-3 m-xl-0">
           <div class="feature_image"><img src="img/about5.svg" alt="Скорость"></div>
           <div class="feature_item__text">
             <h3>Скорость</h3>
@@ -953,7 +955,7 @@
           </div>
         </div>
       
-        <div class="col-12 col-lg-6 col-xl-4 feature_item m-3 m-xl-0">
+        <div class="col-12 col-md-6 col-xl-4 feature_item m-3 m-xl-0">
           <div class="feature_image"><img src="img/about6.svg" alt="Служба качества"></div>
           <div class="feature_item__text">
             <h3>Служба качества</h3>
@@ -967,7 +969,9 @@
         <img class="me-4" src="img/length.svg" alt=""> Оформить заявку на замер
       </button>
     </div>
-  </section> 
+  </section>  
+
+
 
 <section id="portfolio">
   <div class="container bg-light">
@@ -1020,7 +1024,7 @@
 
   <div class="container">
 
-    <h2 class="h2 text-center text-light">Вопрос-ответ</h2>
+    <h2 class="h2 text-center text-light faq_header">Вопрос-ответ</h2>
 
     <div class="accordion" id="accordionFAQ">
 
@@ -1129,10 +1133,10 @@
     <h2 class="h2 text-center">Контакты</h2>
 
     <div class="row">
-      <div class="col-12 col-lg-6">
+      <div class="col-12 col-lg-6 position-relative">
 
-        <div class="contacts_left">
-          <p class="text-center text-lg-start">Бесплатная консультация:</p>
+        <div class="contacts_left ps-lg-5">
+          <p class="text-center text-lg-start fw-bold free_cons">Бесплатная консультация:</p>
           <div class="tels d-flex flex-column flex-xxl-row align-items-center align-items-lg-start  fw-bold mb-5">
             
             <p><img class="me-4" src="img/tel.svg" alt="">8 (4932) 34 - 31 - 40</p>
@@ -1146,7 +1150,7 @@
             <img class="me-4" src="img/email.svg" alt="">
             <p>okna@haus.ru</p>
           </div>
-          <div class="contacts_text text-center text-lg-start">
+          <div class="contacts_text text-center text-lg-start mx-auto mx-lg-0">
             <p>Установку должны выполнять только эксперты. Нам доверяют сотни семей. Узнайте поробнее, какие решения вам подходят. Вы
             можете приобрести недорогие товары при гарантированно высоком качестве.</p>
             <div class="socials d-flex justify-content-between mx-auto mx-lg-0">
@@ -1211,13 +1215,13 @@
               </a>
             </div>
           </div>
-          <img class="contacts_image" src="img/contacts.png" alt="">
+          
         </div>
-
+<img class="contacts_image d-none d-md-block" src="img/contacts.png" alt="">
       </div>
-      <div class="col-12 col-lg-6">
+      <div class="col-12 col-lg-6 mb-5 mb-lg-0">
         <div class="form">
-          <h2 class="h2">Остались вопросы?</h2>
+          <h2 class="h2 text-center">Остались вопросы?</h2>
           <form class="d-flex flex-column">
             
               <input type="text" placeholder="Ваше имя">            
@@ -1227,7 +1231,7 @@
                 <span class="checkmark"></span>
                 Согласен на обработку <a href="#" class="personal_data">персональных данных</a>                
               </label>
-              <button class="btn ">Отправить сообщение</button>
+              <button class="btn__reverse">Отправить сообщение</button>
           </form>
         </div>
       </div>
@@ -1235,7 +1239,89 @@
   </div>
 </section> 
 
+<footer>
+  <div class="container">
+    <div class="row">
+      <div class="col-12 col-lg-6">
+        <div class="footer_left d-flex align-items-center">
+          <a href="index.html"><img src="img/logo.png" alt=""></a>
+          <p class="text-white">© ООО “Окна Хаус”, 2011 - 2022</p>
+        </div>
+      </div>
+      <div class="col-12 col-lg-6 d-flex footer_right align-items-center justify-content-end mt-5 mt-lg-0">        
+          <a class="me-4" href="#">Политика конфиденциальности</a> 
+          <a href="#">Пользовательское соглашение</a>        
+      </div>
+</footer>
 
+<!-- modal -->
+
+<div class="nav_modals">
+  <div class="modal fade" id="zamer" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-body">
+  
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Закрыть"><svg width="23" height="24" viewBox="0 0 23 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M21.5 1.64355L1 22.1436M1 1.64355L21.5 22.1436" stroke="white" stroke-width="2" stroke-linecap="round"
+              stroke-linejoin="round" />
+          </svg>
+</button>
+  
+  
+          
+            <h2 class="h2 text-center"><img src="img/length.svg" alt="">Вызвать замерщика на дом</h2>
+            <form class="d-flex flex-column">
+  
+              <input type="text" placeholder="Ваше имя">
+              <input type="number" placeholder="Номер телефона">
+              <input type="email" placeholder="E-mail">
+  
+              <label class="label"><input class="checkbox" type="checkbox" checked="checked">
+                <span class="checkmark"></span>
+                Я согласен(на) на обработку <a href="#" class="personal_data">персональных данных</a>
+              </label>
+              <button type="submit">Отправить заявку</button>
+            </form>
+          
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="modal fade" id="raschet" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-body">
+  
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Закрыть"><svg width="23" height="24"
+              viewBox="0 0 23 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M21.5 1.64355L1 22.1436M1 1.64355L21.5 22.1436" stroke="white" stroke-width="2"
+                stroke-linecap="round" stroke-linejoin="round" />
+            </svg>
+          </button>
+  
+  
+  
+          <h2 class="h2 text-center"><img src="img/length.svg" alt="">Заказать расчет</h2>
+          <form class="d-flex flex-column">
+  
+            <input type="text" placeholder="Ваше имя">
+            <input type="number" placeholder="Номер телефона">
+            <input type="email" placeholder="E-mail">
+  
+            <label class="label"><input class="checkbox" type="checkbox" checked="checked">
+              <span class="checkmark"></span>
+              Я согласен(на) на обработку <a href="#" class="personal_data">персональных данных</a>
+            </label>
+            <button type="submit">Заказать расчет</button>
+          </form>
+  
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
 
 
 
@@ -1260,7 +1346,9 @@
   
   
 
-<!-- modal -->
+
+
+
 
 <div class="modal fade" id="ustanovka" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
   <div class="container"></div>

@@ -47,6 +47,10 @@ body {
   height: 100px;
 }
 
+.modal_buttons img {
+  margin-right: 13px;
+}
+
 .navbar {
   padding: 0;
   padding-top: 13px;
@@ -211,10 +215,6 @@ body {
   border-top: 4px solid #EF7F04 !important;
 }
 
-.navbar .modal_buttons img {
-  margin-right: 13px;
-}
-
 .btn {
   color: #fff;
   background-color: #EF7F04;
@@ -222,9 +222,15 @@ body {
   border: none;
 }
 
+.btn:focus {
+  outline: none;
+  -webkit-box-shadow: none;
+          box-shadow: none;
+}
+
 .btn__hover:hover {
   color: #fff;
-  background-color: #3B3A63 !important;
+  background-color: #3B3A63;
 }
 
 .btn__reverse {
@@ -652,7 +658,7 @@ body {
 }
 
 #schtandart .schtandart {
-  padding: 2.25rem 5.125rem 5.5rem;
+  padding: 2.25rem 5.125rem 0rem;
   background: url(img/schtandart.png) no-repeat center;
   background-size: cover;
 }
@@ -682,6 +688,7 @@ body {
   -webkit-box-flex: 0;
       -ms-flex-positive: 0;
           flex-grow: 0;
+  margin-bottom: 4.375rem;
 }
 
 #schtandart .schtandart .shtandart_waranty .waranty img {
@@ -724,7 +731,6 @@ body {
 }
 
 #about_us .about_us__pills .video {
-  max-width: 595px;
   width: 100%;
   height: auto;
 }
@@ -746,21 +752,35 @@ body {
 
 #about_us .about_us__pills .tab-pane {
   min-height: 460px;
-}
-
-#about_us #pills-description {
-  margin-bottom: 5.375rem;
+  margin-top: 1.5rem;
+  margin-bottom: 4.25rem;
 }
 
 #about_us #pills-description .logo {
-  margin-top: 45px;
-  margin-left: 50px;
+  display: block;
+  margin: 2rem auto;
+}
+
+@media screen and (min-width: 992px) {
+  #about_us #pills-description .logo {
+    margin: 45px 0 0 50px;
+    margin-top: 45px;
+    margin-left: 50px;
+  }
 }
 
 #about_us #pills-description .about_text {
-  line-height: 1.375rem;
-  max-width: 305px;
-  margin: 3.875rem 3.25rem 0 auto;
+  margin: 2rem;
+  text-align: center;
+}
+
+@media screen and (min-width: 992px) {
+  #about_us #pills-description .about_text {
+    line-height: 1.375rem;
+    max-width: 305px;
+    margin: 3.875rem 3.25rem 0 auto;
+    text-align: left;
+  }
 }
 
 #about_us #pills-description .play_button {
@@ -875,7 +895,7 @@ body {
 
 #about_us .features_list {
   min-height: 450px;
-  padding: 70px 40px 85px;
+  padding: 70px 0 85px;
 }
 
 #about_us .features_list .feature_image {
@@ -892,10 +912,25 @@ body {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
   max-width: 370px;
-  -webkit-box-align: start;
-      -ms-flex-align: start;
-          align-items: flex-start;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  text-align: center;
+}
+
+@media screen and (min-width: 425px) {
+  #about_us .features_list .feature_item {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    text-align: left;
+  }
 }
 
 #about_us .features_list .feature_item img {
@@ -948,6 +983,10 @@ body {
   height: 300px;
 }
 
+#faq .faq_header {
+  margin-bottom: 3.125rem;
+}
+
 #faq .container {
   padding: 2.5rem 6.25rem 4rem;
   margin-bottom: 5.375rem;
@@ -966,6 +1005,7 @@ body {
 
 #faq .container .accordion-item .accordion-button {
   background: #eeeef3;
+  font-weight: 700;
 }
 
 #faq .container .accordion-item .accordion-button:not(.collapsed) {
@@ -1001,7 +1041,72 @@ body {
   padding-top: 3.75rem;
 }
 
+#contacts .row .contacts_left {
+  position: relative;
+  padding-bottom: 7.5rem;
+}
+
+#contacts .row .contacts_left .free_cons {
+  font-size: 18px;
+}
+
+#contacts .row .contacts_left p {
+  margin: 0;
+}
+
+#contacts .row .contacts_left .tels p {
+  margin: 0;
+  font-size: 1.375rem;
+  line-height: 2.25;
+}
+
+#contacts .row .contacts_left .location {
+  margin-bottom: 0.75rem;
+  font-size: 18px;
+  font-size: 18px;
+  line-height: 21px;
+}
+
+#contacts .row .contacts_left .mail {
+  font-size: 18px;
+  font-size: 18px;
+  line-height: 21px;
+}
+
+#contacts .row .contacts_left .contacts_text {
+  position: relative;
+  z-index: 99;
+  font-size: 16px;
+  line-height: 22px;
+  color: #2f2f51;
+  margin-top: 3.625rem;
+  max-width: 230px;
+}
+
+#contacts .row .contacts_left .socials {
+  margin-top: 1.75rem;
+  width: 200px;
+}
+
+#contacts .row .contacts_left .socials a:hover svg {
+  stroke: #2F2F51;
+}
+
+#contacts .row .contacts_left .socials svg {
+  stroke: #EF7F04;
+}
+
+#contacts .row .contacts_image {
+  position: absolute;
+  z-index: 2;
+  z-index: 9;
+  bottom: 0;
+  right: -4.5rem;
+}
+
 #contacts .row .form {
+  position: relative;
+  z-index: -1;
   max-width: 510px;
   margin: 0 auto;
   background: #fff;
@@ -1011,49 +1116,166 @@ body {
   padding: 3.5rem 3.75rem 3.125rem;
 }
 
-#contacts .contacts_left {
+#contacts .row .form h2 {
+  margin-bottom: 1.875rem;
+}
+
+#contacts .row .form input {
+  padding: 1rem;
+  background: #e2e2e2;
+  border: none;
+  border-radius: 3px;
+  margin-bottom: 1.375rem;
+  font-size: 16px;
+  line-height: 18.75px;
+}
+
+#contacts .row .form input::-webkit-input-placeholder {
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 16px;
+  color: #424268;
+}
+
+#contacts .row .form input:-ms-input-placeholder {
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 16px;
+  color: #424268;
+}
+
+#contacts .row .form input::-ms-input-placeholder {
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 16px;
+  color: #424268;
+}
+
+#contacts .row .form input::placeholder {
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 16px;
+  color: #424268;
+}
+
+#contacts .row .form textarea {
+  padding: 0.75rem 1rem;
+  background: #e2e2e2;
+  border: none;
+  border-radius: 3px;
+  margin-bottom: 15px;
+  font-size: 14px;
+  line-height: 16px;
+}
+
+#contacts .row .form textarea::-webkit-input-placeholder {
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 16px;
+  color: #424268;
+}
+
+#contacts .row .form textarea:-ms-input-placeholder {
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 16px;
+  color: #424268;
+}
+
+#contacts .row .form textarea::-ms-input-placeholder {
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 16px;
+  color: #424268;
+}
+
+#contacts .row .form textarea::placeholder {
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 16px;
+  color: #424268;
+}
+
+#contacts .row .form .label {
   position: relative;
-  padding-left: 3.125rem;
-  padding-bottom: 7.5rem;
+  padding-left: 35px;
+  font-size: 14px;
+  line-height: 16px;
 }
 
-#contacts .contacts_left p {
-  margin: 0;
-}
-
-#contacts .contacts_left .tels p {
-  margin: 0;
-  font-size: 1.375rem;
-  line-height: 2.25;
-}
-
-#contacts .contacts_left .location {
-  margin-bottom: 0.75rem;
-}
-
-#contacts .contacts_left .contacts_text {
-  margin-top: 3.875rem;
-  max-width: 230px;
-}
-
-#contacts .contacts_left .socials {
-  margin-top: 1.75rem;
-  width: 200px;
-}
-
-#contacts .contacts_left .socials a:hover svg {
-  stroke: #2F2F51;
-}
-
-#contacts .contacts_left .socials svg {
-  stroke: #EF7F04;
-}
-
-#contacts .contacts_left .contacts_image {
+#contacts .row .form .label .checkbox {
   position: absolute;
-  z-index: 9;
-  bottom: 0;
-  right: -4.5rem;
+  opacity: 0;
+  height: 0;
+  width: 0;
+}
+
+#contacts .row .form .label .checkmark {
+  position: absolute;
+  top: -5px;
+  left: 0;
+  width: 25px;
+  height: 25px;
+  background: #e2e2e2;
+  border-radius: 3px;
+}
+
+#contacts .row .form .label .checkmark:after {
+  content: "";
+  position: absolute;
+  display: none;
+}
+
+#contacts .row .form .label input:checked ~ .checkmark:after {
+  display: block;
+}
+
+#contacts .row .form .label .checkmark:after {
+  content: url(img/check.svg);
+  left: 6px;
+  bottom: 6px;
+  width: 20px;
+  height: 21px;
+}
+
+#contacts .row .form .personal_data {
+  color: #EF7F04;
+}
+
+#contacts .row .form button {
+  margin: 2rem auto 0;
+  padding: 1rem 2.75rem;
+  font-size: 16px;
+  font-weight: 700;
+  border: none;
+  border-radius: 3px;
+  color: #fff;
+  cursor: pointer;
+  -webkit-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+}
+
+footer {
+  background: #3B3A63;
+  padding: 3.25rem 0;
+}
+
+footer .footer_left p {
+  margin: 0;
+}
+
+footer .footer_left img {
+  width: 55px;
+  margin-right: 1.375rem;
+}
+
+footer .footer_right a {
+  color: #fff;
+  text-decoration: none;
+}
+
+footer .footer_right a:hover {
+  color: #EF7F04;
 }
 
 .splide__arrow {
@@ -1075,9 +1297,159 @@ body {
   max-width: 1000px;
 }
 
-.modal .btn-close {
+.nav_modals .modal-dialog {
+  max-width: 595px;
+}
+
+.nav_modals .modal-content {
+  border-radius: 10px;
+  -webkit-filter: drop-shadow(0px 4px 10px rgba(0, 0, 0, 0.25));
+          filter: drop-shadow(0px 4px 10px rgba(0, 0, 0, 0.25));
+}
+
+.nav_modals .modal-content .modal-body {
+  padding: 3.5rem 6.25rem;
+  position: relative;
+}
+
+.nav_modals .modal-content .modal-body .btn-close {
   position: absolute;
-  top: 33px;
-  right: 31px;
+  top: 25px;
+  right: 20px;
+  border: 0;
+  border-radius: 0.25rem;
+  background: none;
+}
+
+.nav_modals .modal-content .modal-body h2 {
+  color: #fff;
+  margin-bottom: 2rem;
+}
+
+.nav_modals .modal-content .modal-body h2 img {
+  margin-right: 1.625rem;
+}
+
+.nav_modals .modal-content .modal-body form input {
+  padding: 1rem;
+  background: #fff;
+  border: none;
+  border-radius: 3px;
+  margin-bottom: 1.125rem;
+  font-size: 16px;
+  line-height: 18.75px;
+}
+
+.nav_modals .modal-content .modal-body form input::-webkit-input-placeholder {
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 16px;
+  color: #424268;
+}
+
+.nav_modals .modal-content .modal-body form input:-ms-input-placeholder {
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 16px;
+  color: #424268;
+}
+
+.nav_modals .modal-content .modal-body form input::-ms-input-placeholder {
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 16px;
+  color: #424268;
+}
+
+.nav_modals .modal-content .modal-body form input::placeholder {
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 16px;
+  color: #424268;
+}
+
+.nav_modals .modal-content .modal-body form .label {
+  position: relative;
+  padding-left: 35px;
+  font-size: 14px;
+  line-height: 16px;
+  color: #fff;
+}
+
+.nav_modals .modal-content .modal-body form .label .checkbox {
+  position: absolute;
+  opacity: 0;
+  height: 0;
+  width: 0;
+}
+
+.nav_modals .modal-content .modal-body form .label .checkmark {
+  position: absolute;
+  top: -5px;
+  left: 0;
+  width: 25px;
+  height: 25px;
+  background: #fff;
+  border-radius: 3px;
+}
+
+.nav_modals .modal-content .modal-body form .label .checkmark:after {
+  content: "";
+  position: absolute;
+  display: none;
+}
+
+.nav_modals .modal-content .modal-body form .label input:checked ~ .checkmark:after {
+  display: block;
+}
+
+.nav_modals .modal-content .modal-body form .label .checkmark:after {
+  content: url(img/check.svg);
+  left: 6px;
+  bottom: 6px;
+  width: 20px;
+  height: 21px;
+}
+
+.nav_modals .modal-content .modal-body form .personal_data {
+  color: #EF7F04;
+  text-decoration: none;
+}
+
+.nav_modals .modal-content .modal-body form button {
+  margin: 2rem auto 0;
+  padding: 1rem 2.75rem;
+  font-size: 16px;
+  font-weight: 700;
+  border: none;
+  border-radius: 3px;
+  background: #fff;
+  cursor: pointer;
+  -webkit-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+}
+
+#zamer .modal-content {
+  background: #EF7F04;
+}
+
+#zamer .modal-content .personal_data {
+  color: #3B3A63;
+}
+
+#zamer .modal-content button {
+  color: #EF7F04;
+}
+
+#raschet .modal-content {
+  background: #3B3A63;
+}
+
+#raschet .modal-content .personal_data {
+  color: #EF7F04;
+}
+
+#raschet .modal-content button {
+  color: #3B3A63;
 }
 /*# sourceMappingURL=main.css.map */
