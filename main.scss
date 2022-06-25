@@ -23,17 +23,17 @@ body {
 
 .modal_buttons {
   img {
-    margin-right: 13px;
+    margin-right: 0.75rem;
   }
 }
 
 .navbar {
   padding: 0;
-  padding-top: 13px;
+  padding-top: 0.75rem;
   @media screen and (min-width: 1200px) {
     padding-top: 0;
   }
-  padding-top: 13px;
+  padding-top: 0.75rem;
   .navbar-brand {
     img {
       max-width: 90px;
@@ -259,9 +259,12 @@ body {
     position: relative;
     max-width: 405px;
     border-radius: 10px;
-    padding: 43px 43px 66px;
+    padding: 45px 15px 65px;
     margin: 69px 0 65px;
     background-color: $white;
+    @media (min-width: 425px) {
+      padding: 45px 45px 65px;
+    }
 
     p {
       margin-bottom: 27px;
@@ -527,9 +530,13 @@ body {
         margin-bottom: 1.5rem;
 
         p {
-          font-size: 18px;
+          font-size: 12px;
           font-weight: 700;
           margin-bottom: 0;
+
+          @media screen and (min-width: 450px) {
+            font-size: 18px;
+          }
         }
 
         p:last-child {
@@ -614,7 +621,8 @@ body {
 
     .video {
       width: 100%;
-      height: auto;
+      height: 100%;
+      object-fit: cover;
     }
 
     .nav-link {
@@ -633,7 +641,7 @@ body {
     }
 
     .tab-pane {
-      min-height: 460px;
+      // min-height: 460px;
       margin-top: 1.5rem;
       margin-bottom: 4.25rem;
     }
@@ -732,8 +740,9 @@ body {
 
     .send_feedback {
       position: absolute;
-      top: 3.5rem;
-      right: 6.25rem;
+      bottom: 0;
+      left: 0;
+      right: 0;
       padding: 1.125rem 1.75rem 1.125rem 1.25rem;
       font-weight: 700;
       font-size: 16px;
@@ -741,6 +750,13 @@ body {
       box-shadow: none;
       img {
         margin-right: 1.125rem;
+      }
+
+      @media screen and (min-width: 992px) {
+        top: 3.5rem;
+        right: 6.25rem;
+        bottom: auto;
+        left: auto;
       }
     }
   }
@@ -762,7 +778,10 @@ body {
 
   .features_list {
     min-height: 450px;
-    padding: 70px 0 85px;
+    padding: 1rem 0 1rem;
+    @media screen and (min-width: 768px) {
+      padding: 70px 0 85px;
+    }
 
     .feature_image {
       max-width: 115px;
@@ -843,9 +862,13 @@ body {
     margin-bottom: 3.125rem;
   }
   .container {
-    padding: 2.5rem 6.25rem 4rem;
+    padding: 2.5rem 1rem 4rem;
     margin-bottom: 5.375rem;
     background: $primary;
+
+    @media screen and (min-width: 768px) {
+      padding: 2.5rem 6.25rem 4rem;
+    }
 
     .accordion-item {
       border-radius: 3px;
@@ -960,13 +983,15 @@ body {
 
     .form {
       position: relative;
-      z-index: -1;
       max-width: 510px;
       margin: 0 auto;
       background: $white;
       border-radius: 10px;
       filter: $drop-shadow;
-      padding: 3.5rem 3.75rem 3.125rem;
+      padding: 3.5rem 1rem 3.125rem;
+      @media screen and (min-width: 768px) {
+        padding: 3.5rem 3.75rem 3.125rem;
+      }
       h2 {
         margin-bottom: 1.875rem;
       }
@@ -1051,6 +1076,7 @@ body {
 
       .personal_data {
         color: $primary;
+        text-decoration: none;
       }
 
       button {
@@ -1123,9 +1149,12 @@ footer {
     filter: $drop-shadow;
 
     .modal-body {
-      padding: 3.5rem 6.25rem;
+      padding: 3.5rem 2rem;
       position: relative;
 
+      @media screen and (min-width: 768px) {
+        padding: 3.5rem 6.25rem;
+      }
       .btn-close {
         position: absolute;
         top: 25px;
@@ -1244,6 +1273,270 @@ footer {
     }
     button {
       color: $hover;
+    }
+  }
+}
+
+.our_services_modals {
+  .modal-content {
+    border-radius: 10px;
+    filter: $drop-shadow;
+
+    .modal-body {
+      position: relative;
+      padding: 1rem;
+      @media screen and (min-width: 768px) {
+        padding: 50px 30px;
+      }
+
+      .splide__pagination__page.is-active {
+        transform: none;
+        background: $primary;
+      }
+
+      .btn-close {
+        position: absolute;
+        top: 30px;
+        right: 30px;
+      }
+
+      .modal_btns {
+        .btn {
+          border-radius: 3px;
+        }
+        .btn:first-child {
+          margin-right: 0.875rem;
+        }
+      }
+
+      .splide__slide {
+        img {
+          flex-grow: 1;
+        }
+      }
+
+      .modal_feature {
+        display: flex;
+        margin-bottom: 40px;
+        .modal_feature_img {
+          width: 80px;
+          margin-right: 18px;
+        }
+
+        .modal_feature_text {
+          h4 {
+            font-size: 14px;
+            font-weight: bold;
+          }
+          p {
+            font-size: 13px;
+          }
+        }
+      }
+    }
+  }
+}
+
+#modal_feedback {
+  .modal-content {
+    border-radius: 10px;
+    filter: $drop-shadow;
+
+    .modal-body {
+      padding: 0;
+
+      .btn-close {
+        position: absolute;
+        top: 25px;
+        right: 20px;
+        z-index: 999;
+      }
+
+      .h2 {
+        svg {
+          stroke: $primary;
+          fill: none;
+          position: absolute;
+          left: 0;
+        }
+      }
+
+      .form {
+        position: relative;
+        max-width: 510px;
+        margin: 0 auto;
+        background: $white;
+        border-radius: 10px;
+        filter: $drop-shadow;
+        padding: 3.5rem 1rem 3.125rem;
+        @media screen and (min-width: 768px) {
+          padding: 3.5rem 3.75rem 3.125rem;
+        }
+        h2 {
+          margin-bottom: 1.875rem;
+        }
+
+        input {
+          padding: 1rem;
+          background: #e2e2e2;
+          border: none;
+          border-radius: 3px;
+          margin-bottom: 1.375rem;
+          font-size: 16px;
+          line-height: 18.75px;
+
+          &::placeholder {
+            font-weight: 400;
+            font-size: 14px;
+            line-height: 16px;
+
+            color: #424268;
+          }
+        }
+
+        textarea {
+          padding: 0.75rem 1rem;
+          background: #e2e2e2;
+          border: none;
+          border-radius: 3px;
+          margin-bottom: 15px;
+          font-size: 14px;
+          line-height: 16px;
+
+          &::placeholder {
+            font-weight: 400;
+            font-size: 14px;
+            line-height: 16px;
+
+            color: #424268;
+          }
+        }
+
+        .label {
+          position: relative;
+          padding-left: 35px;
+          font-size: 14px;
+          line-height: 16px;
+
+          .checkbox {
+            position: absolute;
+            opacity: 0;
+            height: 0;
+            width: 0;
+          }
+
+          .checkmark {
+            position: absolute;
+            top: -5px;
+            left: 0;
+            width: 25px;
+            height: 25px;
+            background: #e2e2e2;
+            border-radius: 3px;
+          }
+
+          .checkmark:after {
+            content: "";
+            position: absolute;
+            display: none;
+          }
+
+          input:checked ~ .checkmark:after {
+            display: block;
+          }
+
+          .checkmark:after {
+            content: url(img/check.svg);
+            left: 6px;
+            bottom: 6px;
+            width: 20px;
+            height: 21px;
+          }
+        }
+
+        .personal_data {
+          color: $primary;
+          text-decoration: none;
+        }
+
+        button {
+          margin: 2rem auto 0;
+          padding: 1rem 2.75rem;
+          font-size: 16px;
+          font-weight: 700;
+          border: none;
+          border-radius: 3px;
+          color: $white;
+          cursor: pointer;
+          transition: all 0.3s ease-in-out;
+        }
+      }
+    }
+  }
+}
+
+#modal_portfolio {
+  .modal-content {
+    border-radius: 10px;
+    filter: $drop-shadow;
+
+    .modal-body {
+      position: relative;
+      padding: 1rem 0;
+      @media screen and (min-width: 768px) {
+        padding: 50px 0 0;
+      }
+
+      .splide__pagination {
+        bottom: -20px;
+        .splide__pagination__page {
+          background: #ffffff;
+          border: 1px solid #9494a8;
+        }
+      }
+
+      .splide__pagination__page.is-active {
+        transform: none;
+        background: $primary;
+      }
+
+      .btn-close {
+        position: absolute;
+        top: 30px;
+        right: 30px;
+      }
+
+      .modal_btns {
+        .btn {
+          border-radius: 3px;
+        }
+        .btn:first-child {
+          margin-right: 0.875rem;
+        }
+      }
+
+      .splide__slide {
+        img {
+          flex-grow: 1;
+        }
+      }
+
+      .portfolio_date {
+        color: #9494a8;
+      }
+
+      p {
+        font-size: 14px;
+      }
+
+      .fw-bold {
+        font-size: 16px;
+      }
+
+      iframe {
+        width: 100%;
+        height: 300px;
+      }
     }
   }
 }
