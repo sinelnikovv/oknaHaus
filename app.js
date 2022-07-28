@@ -80,6 +80,7 @@ var splide = new Splide('#our_services_splide_1', {
   perMove: 1,
   pagination: boolean = true,
   arrows: false,
+  gap: "1rem",
 }).mount();
 var splide = new Splide('#our_services_splide_2', {
   type   : 'loop',
